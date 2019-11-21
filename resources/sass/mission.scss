@@ -1,0 +1,47 @@
+.mission-row {
+    width: 100%;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+.mission-container {
+    background-color: white;
+    width: 100%;
+    max-width: 580px;
+    position: relative!important;
+    padding: 40px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+ }
+
+ .mission-container:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 100%;
+    height: 100%;
+    background-color: $primary;
+    z-index: -1;
+ }
+
+ .mission-left-col {
+     z-index: 1;
+ }
+
+.mission-container h1 {
+    text-align: left;
+}
+
+.mission-container p {
+    font-size: 16px;
+    line-height: 28px;
+    color: $text;
+    font-weight: 500;
+}
+
+.contact-btn {
+    margin: 20px;
+}

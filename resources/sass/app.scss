@@ -1,0 +1,80 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500,700,900&display=swap');
+
+@import '~slick-carousel/slick/slick.scss';
+@import '~slick-carousel/slick/slick-theme.scss';
+@import '~animate.css/animate.css';
+
+
+// $hamburger-layer-width: 30px !default;
+// $hamburger-layer-height: 3px !default;
+// $hamburger-layer-spacing: 6px !default;
+// $hamburger-layer-color: #a4a8ad !default;
+
+@import '~hamburgers/_sass/hamburgers/hamburgers.scss';
+
+
+// Variables
+@import './_variables';
+
+@import './about';
+@import './contact';
+@import './hero';
+@import './mission';
+@import './navigation';
+@import './services';
+
+
+html,body
+{
+    width: 100%!important;
+    height: 100%!important;
+    margin: 0px!important;
+    padding: 0px!important;
+    // overflow: hidden!important;
+}
+
+.row {
+    margin-right: 0px!important;
+    margin-left: 0px!important;
+}
+
+.custom-container {
+    max-width: 1224px!important;
+}
+
+.col {
+    padding: 0px!important;
+}
+
+.para {
+    font-size: 16px;
+    line-height: 28px;
+    color: #6f7880;
+    font-weight: 500;
+}
+
+.title-text {
+    color: $primary;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 28px;
+    font-family: 'Red Hat Display', sans-serif;
+    display: inline-block;
+}
+
+.title-underline {
+    height: 4px;
+    width: 60px;
+    background-color: #76cbc1;
+    display: block;
+    border-radius: 4px;
+    margin: 15px 0px;
+}
+
+.custom-progress-bar {
+    position: absolute;
+}
+
+

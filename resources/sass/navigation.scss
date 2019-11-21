@@ -1,0 +1,105 @@
+.nav-container {
+    background-color: hsl(0, 0%, 97%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin-top: 50px;
+    box-shadow: 0px 3px 5px -2px #0000008a;
+    max-width: 980px;
+    padding: 0px;
+}
+
+a.nav-links {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 18px;
+    color: $text!important;
+
+}
+
+ .logo-home {
+    color: $primary;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    font-size: 26px;
+    letter-spacing: .5px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.logo-visions {
+    color: $secondary;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    font-size: 26px;
+    letter-spacing: .5px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+p.logo-pm {
+    line-height: 0.1;
+    font-family: "red hat display", sans-serif;
+    color: hsla(208, 8%, 59%, 1);
+    font-size: 18px;
+    margin-top: 2px;
+    font-weight: 200;
+    letter-spacing: .5px;
+    text-align: left;
+}
+
+.logo-text {
+    text-align: left;
+    min-width: 200px;
+}
+
+.nav-contact {
+    background-color: $secondary!important;
+}
+
+.logo-icon {
+    min-width: 130px;
+    margin: 18px 12px;
+}
+
+.logo-top {
+    fill: $primary;
+    stroke: $primary;
+    stroke-width:10;
+    stroke-miterlimit:10;
+}
+
+.logo-bottom {
+    fill: $secondary;
+    stroke: $secondary;
+    stroke-width:10;
+    stroke-miterlimit:10;
+}
+
+.logo-middle {
+    fill: $primary;
+}
+
+.custom-row {
+    max-width: 980px;
+}
+
+
+.bottom-nav {
+    background-color: $primary;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.bottom-nav h4 {
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: .5px;
+    color: white;
+}
+
+
+
