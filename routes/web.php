@@ -11,13 +11,32 @@
 |
 */
 
+
+// Route::get('validate', 'AuthLoginController');
+
+
+Auth::routes();
+
+Route::resource('api/section', 'api\SectionController');
+Route::resource('api/messages', 'api\MessageController');
+
+Route::get('api/excel', 'api\MessageController@exportExcel');
+
+Route::get('api/admin', 'api\AdminController@index');
+Route::get('api/app', 'api\AppController@index');
+// Route::get('api/messages', 'api\MessageController');
+
 Route::get('/admin', function () {
     return view('admin');
-});
+})->middleware('auth')->name('auth');
 
-Route::get('/admin/{any}', function () {
+Route::get('/admin/{pages}/{section}', function () {
     return view('admin');
-});
+})->middleware('auth');
+
+Route::get('/admin-login', function () {
+    return view('app');
+})->name('admin-login')->middleware('guest');
 
 
 
@@ -27,6 +46,5 @@ Route::get('/{vue_capture?}', function () {
 
 
 
-// Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
+

@@ -33,11 +33,14 @@
         "router": "^1.3.3",
         "slick-carousel": "^1.8.1",
         "vue": "^2.6.10",
+        "vue-json-excel": "^0.2.98",
         "vue-owl-carousel": "^2.0.3",
         "vue-progressbar": "^0.7.5",
         "vue-router": "^3.1.3",
         "vue-slick": "^1.1.15",
+        "vue-snack": "^0.1.4",
         "vuetify": "^2.1.9",
+        "vuetify-confirm": "^2.0.1",
         "vuex": "^3.1.1"
     }
 }

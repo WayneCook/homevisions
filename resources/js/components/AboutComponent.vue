@@ -1,6 +1,6 @@
 <template>
 
-<v-container fluid class="pa-0">
+<v-container v-if="loaded" fluid class="pa-0">
 
     <v-img
     src="/images/houses_about.jpg"
@@ -21,7 +21,7 @@
             class="mx-auto about-us-card"
             max-width="700"
             >
-                <h1 class="title-text">About Us
+                <h1 class="title-text">{{ getData[4].title }}
                     <span class="title-underline"></span>
                 </h1>
 
@@ -43,9 +43,6 @@
 
                 </v-col>
 
-
-
-
             </v-row>
         </v-container>
     </v-img>
@@ -55,11 +52,27 @@
 </template>
 
 <script>
-export default {
 
-    mounted() {
-        this.$store.dispatch('app/setLoadingState', false);
-    }
+export default {
+    data() {
+        return {
+            // loaded: false
+        }
+    },
+    computed: {
+            getData() {
+                return this.$store.getters['app/getData'].sections.reduce((obj, item) => (obj[item.section_id] = item, obj) ,{})
+            },
+            loaded() {
+                return this.$store.getters['app/getLoaded'];
+            }
+        },
+         created() {
+
+            // this.$store.dispatch('app/fetchData').then((res) => {
+            //     if(res) { this.loaded = true }
+            // });
+        },
 
 }
 </script>

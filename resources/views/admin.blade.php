@@ -1,7 +1,9 @@
 @extends('layout.admin.admin')
 
+
 @section('content')
-    <admin-nav-component></admin-nav-component>
+
+    <admin-nav-component :user="{{ Auth::user() }}"></admin-nav-component>
 
     <v-content>
       <v-container
@@ -12,7 +14,11 @@
           align-center
           justify-center
         >
-          <router-view></router-view>
+
+        <transition name="router-anim" mode="out-in" enter-active-class="animated fadeInLeft" leave-active-class="animated fadeOutRight">
+            <router-view style="animation-duration: .5s"></router-view>
+        </transition>
+
         </v-layout>
       </v-container>
     </v-content>
@@ -21,7 +27,10 @@
       color="#2f4554"
       app
     >
-      <span class="white--text">&copy; 2019</span>
+      <span class="white--text">Home Visions &copy;2019</span>
     </v-footer>
 
+
 @endsection
+
+

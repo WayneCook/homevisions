@@ -8,6 +8,8 @@ import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 import Slick from 'vue-slick'
 
+import VueProgressBar from 'vue-progressbar'
+
 
 import 'vuetify/dist/vuetify.min.css'
 import store from './store'
@@ -22,6 +24,8 @@ import MobileNavComponent from './components/nav/MobileNavComponent'
 import MissionComponent from './components/MissionComponent'
 import ServicesComponent from './components/ServicesComponent'
 import ContactComponent from './components/ContactComponent'
+import LoginComponent from './components/LoginComponent'
+import DashboardComponent from './components/admin/DashboardComponent'
 // import AboutComponent from './components/About'
 // import ContactComponent from './components/Contact'
 // import BlogComponent from './components/Blog'
@@ -43,17 +47,39 @@ Vue.use(Vuex)
 // Vue.component('CustomPieChart', CustomPieChart)
 // Vue.component('CustomLineChart', CustomLineChart)
 
+
 const router = new VueRouter({
     mode: 'history',
     linkExactActiveClass: "active",
     routes: [
         { path: "/", component: HomeComponent, name: "home" },
         { path: "/about", component: AboutComponent, name: "about" },
+        { path: "/admin-login", component: LoginComponent, name: "adminlogin" },
+        { path: "/admin", component: DashboardComponent, name: "dashboard" },
         // { path: '/about', component: AboutComponent },
         // { path: '/contact', component: ContactComponent },
         // { path: '/blog', component: BlogComponent },
       ]
   })
+
+
+
+  const options = {
+    color: 'rgb(47, 193, 176)',
+    failedColor: '#874b4b',
+    thickness: '4px',
+    transition: {
+      speed: '0.2s',
+      opacity: '0.6s',
+      termination: 1200
+    },
+    autoRevert: true,
+    location: 'top',
+    inverse: false
+  }
+
+  Vue.use(VueProgressBar, options)
+
 
 
 //Root vue instance
@@ -64,7 +90,8 @@ const app = new Vue({
     store,
     // store,
     data: () => ({
-        drawer: null
+        drawer: null,
+        loading: false
       }),
     components: {
         HomeComponent,
@@ -75,11 +102,41 @@ const app = new Vue({
         ContactComponent,
         Slick,
         AdminNavComponent,
+        LoginComponent,
+        DashboardComponent
         // AboutComponent,
         // ContactComponent,
         // BlogComponent,
         // CustomDatatable,
         // CustomPieChart,
         // CustomLineChart
-    }
+    },
+    mounted () {
+        //  [App.vue specific] When App.vue is finish loading finish the progress bar
+        this.$Progress.finish()
+        setTimeout(() => { this.loading = false }, 2000)
+      },
+      created () {
+
+        this.$store.dispatch('app/fetchData');
+        //  [App.vue specific] When App.vue is first loaded start the progress bar
+
+        this.loading = true
+        //  hook the progress bar to start before we move router-view
+        this.$router.beforeEach((to, from, next) => {
+          //  start the progress bar
+          this.loading = true
+          //  continue to next page
+          next()
+        })
+        //  hook the progress bar to finish after we've finished moving router-view
+        this.$router.afterEach((to, from) => {
+          //  finish the progress bar
+        setTimeout(() => { this.loading = false }, 2000)
+        })
+      }
 });
+
+
+
+

@@ -1,10 +1,8 @@
 <template>
-    <li @mouseleave="isActive = false" @mouseover="isActive = true">
+    <li>
         <router-link :class="{ active: getActive}" :to="link.href">{{ link.text }}
-
             <span></span>
         </router-link>
-
     </li>
 </template>
 
@@ -15,11 +13,6 @@ export default {
     data() {
         return {
             isActive: false,
-        }
-    },
-    methods: {
-        activeMenu() {
-
         }
     },
     computed: {
@@ -44,12 +37,13 @@ export default {
         letter-spacing: .3px;
         cursor: default;
         text-decoration: none;
+        cursor: default;
     }
 
     ul li a {
         text-decoration: none;
         color: #6e7881;
-
+        cursor: default;
     }
 
     ul li a.active span {
@@ -62,7 +56,6 @@ export default {
         bottom: -7px;
         left: -100px;
         animation: active .25s ease-in-out forwards;
-
     }
 
     ul li a span {
@@ -76,27 +69,18 @@ export default {
         animation: inactive .25s ease-in-out forwards;
     }
 
-    ul li a.router-link-active:hover span {
-        height: 4px;
-        width: 100%;
-        display: block;
-        background-color: #76cbc1;
-        border-radius: 4px;
-        position: relative;
-        bottom: -7px;
-        left: -100px;
+    ul li:hover a {
+        color: hsla(208, 8%, 65%, 1)!important;
     }
 
-@keyframes active {
-  from {left: -100px;}
-  to {left: 0px;}
-}
+    @keyframes active {
+    from {left: -100px;}
+    to {left: 0px;}
+    }
 
-@keyframes inactive {
-  from {left: 0px}
-  to {left: -100px;}
-}
-
-
+    @keyframes inactive {
+    from {left: 0px}
+    to {left: -100px;}
+    }
 
 </style>

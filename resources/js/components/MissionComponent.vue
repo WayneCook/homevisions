@@ -15,19 +15,10 @@
                 class="mission-container mx-auto"
                 max-width="700"
                 >
-                    <h1 class="title-text">our mission
+                    <h1 class="title-text">{{ getData[1].title }}
                         <span class="title-underline"></span>
                     </h1>
-                    <p>
-                            Our passion and Commitment to the industry from Property owners to tenants makes us stand
-                        out from the rest!
-                        Be assured that your property will be managed with experience professionals that value your
-                        investments.
-
-                        Let us help you simplify your property’s day to day operations or a project as needed.
-                        We specialize in Single family homes, Townhouses, Condos, &amp; Multifamily.
-                        Contact Us Today!
-                    </p>
+                    <p>{{ getData[1].text }}</p>
 
 
                     <div class="my-2">
@@ -61,7 +52,12 @@
 
 <script>
 export default {
+     computed: {
+            getData() {
+                return this.$store.getters['app/getData'].sections.reduce((obj, item) => (obj[item.section_id] = item, obj) ,{})
+            },
 
+        },
 }
 </script>
 

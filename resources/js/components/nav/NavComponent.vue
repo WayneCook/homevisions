@@ -1,18 +1,7 @@
 <template>
     <v-container fluid class="container-wrapper pa-0 ma-0 d-none d-md-block">
-        <v-progress-linear
-        class="custom-progress-bar"
-        indeterminate
-        color="#2fc1b0"
-        height="2"
-        absolute
-        v-if="loading"
-        >
-        </v-progress-linear>
 
         <v-container class="main-nav custom-container d-flex justify-space-between align-center">
-
-
 
             <div class="logo-icon">
 
@@ -34,19 +23,11 @@
                     <p ma-0 class="logo-pm">Property Management</p>
                 </div>
 
-
-
             <ul class="flex-grow-1 d-flex align-center justify-end">
                 <link-component :link="link" :key="i" v-for=" (link, i) in list"></link-component>
             </ul>
                     <v-btn class="ml-4" tile dark color="hsla(173, 61%, 47%, 1)">contact</v-btn>
         </v-container>
-        <!-- <div class="bottom-nav">
-            <h4>
-
-            Managing San Gabriel Valley Properties
-            </h4>
-        </div> -->
     </v-container>
 </template>
 
@@ -63,26 +44,6 @@ export default {
     },
     components: {
         LinkComponent
-    },
-    methods: {
-        activeMenu() {
-
-        }
-    },
-    watch:{
-        $route (to, from){
-            this.$store.dispatch('app/setLoadingState', true);
-        }
-    },
-    computed: {
-
-        loading() {
-            return this.$store.getters['app/loadingState'];
-        }
-
-    },
-    mounted() {
-
     }
 }
 
@@ -109,8 +70,5 @@ export default {
         z-index: 9999;
         margin: auto;
     }
-
-
-
 
 </style>

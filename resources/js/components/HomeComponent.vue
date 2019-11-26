@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid class="pa-0">
+    <v-container v-if="loaded" fluid class="pa-0">
         <v-row pa-0 class="hero-container">
 
             <v-col class="hero-col" >
@@ -33,22 +33,20 @@
             <v-row>
                 <v-col cols="12" md="6" class="d-flex justify-center align-center">
                     <div class="mb-4 info-box">
-                        <h1 class="title-text">Let us do the hard work
+                        <h1 class="title-text">{{ getData[2].title }}
                             <span class="title-underline"></span>
                         </h1>
 
-                        <p class="para">Our approach is simple. Real Property Management offices provide professional, trustworthy property management services, from tenant screening to leasing to maintenance to evictions. Whether you are an investor with several rental homes or an unintentional landlord, your local office has your solution.
-                        </p>
+                        <p class="para">{{ getData[2].text }}</p>
                     </div>
                 </v-col>
 
                 <v-col cols="12" md="6">
                     <div class="info-box">
-                        <h1 class="title-text">Profit without the hassle
+                        <h1 class="title-text">{{ getData[3].title }}
                             <span class="title-underline"></span>
                         </h1>
-                        <p class="para">Owning rental homes can be costly.  The right property management company can make all the difference. For over 30 years, thousands of rental property owners and investors nationwide have trusted Real Property Management offices to take care of their rental property
-                        </p>
+                        <p class="para">{{ getData[3].text }}</p>
                     </div>
                 </v-col>
             </v-row>
@@ -63,26 +61,36 @@
 
 <script>
 
-
 import ContactComponent from './ContactComponent'
 import MissionComponent from './MissionComponent'
 import ServicesComponent from './ServicesComponent'
 
-
 export default {
+    data() {
+        return {
+            // loaded: false
+        }
+    },
     components: {
             ContactComponent,
             MissionComponent,
             ServicesComponent,
-
         },
         created() {
-            // this.$Progress.start();
-        },
-        mounted() {
-            this.$store.dispatch('app/setLoadingState', false);
-        }
 
+            // this.$store.dispatch('app/fetchData').then((res) => {
+            //     if(res) { this.loaded = true }
+            // });
+
+        },
+        computed: {
+            getData() {
+                return this.$store.getters['app/getData'].sections.reduce((obj, item) => (obj[item.section_id] = item, obj) ,{})
+            },
+            loaded() {
+                return this.$store.getters['app/getLoaded']
+            }
+        }
 }
 </script>
 

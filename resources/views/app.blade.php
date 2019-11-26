@@ -12,6 +12,15 @@
     <body>
 
         <v-app id="app">
+                <v-progress-linear
+                class="custom-progress-bar"
+                indeterminate
+                color="#2fc1b0"
+                height="2"
+                fixed
+                v-if="loading"
+                >
+                </v-progress-linear>
 
                 <v-container fluid class="main-container pa-0">
                     <mobile-nav-component></mobile-nav-component>
@@ -27,6 +36,8 @@
 
                         <router-view></router-view>
                     </transition>
+
+
                 </v-container>
 
         </v-app>

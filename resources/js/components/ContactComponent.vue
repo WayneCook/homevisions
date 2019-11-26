@@ -4,9 +4,10 @@
 
     <v-row>
         <v-img
-            src="/images/mountians.jpg"
-            lazy-src="/images/mountians.jpg"
+            src="/images/contact_mountians.jpg"
+            lazy-src="/images/contact_mountians.jpg"
             min-height="680"
+            max-height="700"
         >
 
         <v-row class="mb-8">
@@ -16,11 +17,11 @@
         </v-row>
 
         <v-row>
-            <v-col>
+            <v-col class="pa-4">
 
 
         <v-card
-        class="mx-auto mt-6 contact-card"
+        class="mx-auto contact-card"
         :elevation="13"
         max-width="550"
         tile

@@ -1,32 +1,80 @@
 const state = {
-    loading: true,
-
+    data: [],
+    loaded: false
   }
 
 const mutations = {
 
-    loading (state, condition) {
-
-        state.loading = condition;
+    setData( state, payload ) {
+        state.data = payload
     },
+    setLoaded( state ) {
+        state.loaded = true
+    }
+
 }
 
   // getters
 const getters = {
-    loadingState( state ) {
-        return state.loading;
+
+    getData( state ) {
+        return state.data
     },
+    getLoaded( state ) {
+        return state.loaded
+    }
+
 }
 
 
   // actions
   const actions = {
 
-    setLoadingState ({ commit }, condition) {
+    fetchData({ commit }) {
 
-      commit('loading', condition)
+       return axios.get('/api/app'
+
+        ).then((response) => {
+
+            commit('setData', response.data);
+            commit('setLoaded');
+
+            return true
+
+        })
+        .catch((error) => {
+
+            if (error.response) {
+            console.log(error.response.data.errors);
+            }
+
+        });
 
     },
+    login({ commit }, payload) {
+
+        axios.post(
+
+    '/login', payload
+
+    ).then((response) => {
+
+        console.log(response);
+        window.location.href = "/admin";
+
+
+    })
+    .catch((error) => {
+
+        if (error.response) {
+        console.log(error.response);
+        }
+
+        console.log('there are errors');
+
+    });
+
+    }
 
   }
 
