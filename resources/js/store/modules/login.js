@@ -42,7 +42,7 @@ const getters = {
     ).then((response) => {
 
         // console.log(response);
-        window.location.href = "/admin";
+        window.location.href = "/admin/dashboard";
 
 
     })

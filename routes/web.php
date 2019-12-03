@@ -14,6 +14,23 @@
 
 // Route::get('validate', 'AuthLoginController');
 
+// Route::get('/get-time', function () {
+//     dd(NOW());
+// });
+
+Route::get('/emailtest', function()
+{
+	$beautymail = app()->make(Snowfire\Beautymail\Beautymail::class);
+    $beautymail->send('emails.test', [], function($message)
+    {
+        $message
+			->from('bar@example.com')
+			->to('foo@example.com', 'John Smith')
+			->subject('Welcome!');
+    });
+
+});
+
 
 Auth::routes();
 
@@ -31,6 +48,10 @@ Route::get('/admin', function () {
 })->middleware('auth')->name('auth');
 
 Route::get('/admin/{pages}/{section}', function () {
+    return view('admin');
+})->middleware('auth');
+
+Route::get('/admin/{pages}', function () {
     return view('admin');
 })->middleware('auth');
 

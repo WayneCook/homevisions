@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+require('laravel-mix-polyfill');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,11 +12,25 @@ const mix = require('laravel-mix');
  |
  */
 
+
+// mix.js('resources/js/app.js', 'public/js')
+//    .sass('resources/sass/app.scss', 'public/css')
+
 mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+   .sass('resources/sass/app.scss', 'public/css')
+   .polyfill({
+      enabled: true,
+      useBuiltIns: "usage",
+      targets: {"firefox": "50", "ie": 11}
+   });
 
-   mix.js('resources/js/admin.js', 'public/js');
 
+   mix.js('resources/js/admin.js', 'public/js')
+   .polyfill({
+    enabled: true,
+    useBuiltIns: "usage",
+    targets: {"firefox": "50", "ie": 11}
+ });
 
    mix.browserSync({
     injectChanges: false,

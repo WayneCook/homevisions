@@ -16,58 +16,58 @@
         </v-row>
 
         <v-row>
-            <v-col>
 
+            <v-col class="pa-4">
 
-        <v-card
-        class="mx-auto mt-6 contact-card"
-        :elevation="13"
-        max-width="550"
-        tile
-        >
-
-        <div class="icon-container email-icon">
-            <v-img src="/images/icons/email.png" lazy-src="/images/icons/email.png"></v-img>
-        </div>
-
-        <v-form v-model="valid">
-
-            <v-container>
-            <v-row>
-
-                <v-col
-                cols="12"
+                <v-card
+                class="mx-auto mt-6 contact-card login-card"
+                :elevation="13"
+                max-width="550"
+                tile
                 >
-                <v-text-field
-                    v-model="name"
-                    :error-messages="getErrors.name"
-                    label="Username"
-                    color="#50789f"
-                ></v-text-field>
-                </v-col>
 
-            </v-row>
+                <div class="icon-container email-icon">
+                    <v-img src="/images/icons/lock.png" lazy-src="/images/icons/lock.png"></v-img>
+                </div>
 
-                <v-row>
-                    <v-col
-                    cols="12">
+                <v-form v-model="valid">
+
+                    <v-container>
+                    <v-row>
+
+                        <v-col
+                        cols="12"
+                        >
                         <v-text-field
-                            v-model="password"
-                            label="Password"
+                            v-model="name"
+                            :error-messages="getErrors.name"
+                            label="Username"
                             color="#50789f"
-                            :error-messages="getErrors.password"
                         ></v-text-field>
-                    </v-col>
-                </v-row>
-            </v-container>
-        </v-form>
+                        </v-col>
 
-        <v-card-actions class="d-flex justify-end">
-            <div>
-                <v-btn @click="login()" tile class=" ma-0 contact-btn" large color="rgb(47, 193, 176)" dark>Login</v-btn>
-            </div>
-        </v-card-actions>
-    </v-card>
+                    </v-row>
+
+                        <v-row>
+                            <v-col
+                            cols="12">
+                                <v-text-field
+                                    v-model="password"
+                                    label="Password"
+                                    color="#50789f"
+                                    :error-messages="getErrors.password"
+                                ></v-text-field>
+                            </v-col>
+                        </v-row>
+                    </v-container>
+                </v-form>
+
+                <v-card-actions class="d-flex justify-end">
+                    <div>
+                        <v-btn @click="login()" tile class=" ma-0 contact-btn" large color="rgb(47, 193, 176)" dark>Login</v-btn>
+                    </div>
+                </v-card-actions>
+            </v-card>
 
     </v-col>
             </v-row>
@@ -104,10 +104,6 @@ export default {
             return this.$store.getters['login/errors'];
         }
     },
-    mounted() {
-        this.$store.dispatch('app/setLoadingState', false);
-    },
-
 
 }
 </script>
@@ -118,5 +114,11 @@ export default {
     display: block;
     text-align: center!important;
 } */
+
+.login-card {
+    padding: 20px;
+    padding-top: 50px;
+    margin: 10px;
+}
 
 </style>

@@ -12,7 +12,6 @@ const state = {
     options: {},
     loading: true,
     headers: [
-        { text: "ID", align: "left", sortable: true, value: "id" },
         { text: "Sent on", align: "left", sortable: true, value: "created_at" },
         { text: "Name", align: "left", sortable: true, value: "name" },
         { text: "Email", align: "left", sortable: true, value: "email" },
@@ -69,7 +68,6 @@ const actions = {
 
     async fetchItems({ state, commit }, payload) {
 
-        console.log('fetching');
 
         let success = { status: true };
 
@@ -81,19 +79,12 @@ const actions = {
 
         ).then((response) => {
 
-            console.log(response);
-
             commit('setItems', response.data.collection);
-            // commit('setTotal', response.data.total);
-            // commit('setTotalRevenue', response.data.total_revenue);
-            // commit('setRegistrationData', response.data.registration_data);
-            // commit('setLocationData', response.data.location_data);
-
+            commit('setTotal', response.data.collection.total);
 
 
             success.state = state;
             state.readyState = true;
-            console.log(state.items);
 
         })
         .catch(error => {
@@ -114,54 +105,7 @@ const actions = {
         commit('setEditItems', response.data);
 
     },
-    async updateItem({ state }) {
 
-        let success = { status: true, user: {} };
-
-        await axios.put(
-
-            state.routes.update+state.editItem.id, { params: state.editItem }
-
-            ).then(response => {
-                success.user = response.data.name;
-                state.errors = {};
-                state.editItem = {};
-            })
-            .catch(error => {
-                success.status = false;
-                if(error.response.data.errors) {
-                    state.errors = error.response.data.errors
-                }
-
-            });
-            return success;
-        },
-
-    async createItem({ state }) {
-
-
-        let success = { status: true, user: {} };
-
-        await axios.post(
-
-            state.routes.store, { params: state.editItem }
-
-            ).then(response => {
-
-                success.user = response.data.name;
-                state.errors = {};
-
-            })
-            .catch(error => {
-
-                success.status = false;
-                if(error.response.data.errors) {
-
-                    state.errors = error.response.data.errors
-                }
-            });
-            return success;
-        },
         async deleteItem({ state }, payload) {
 
             let success = { status: true, user: {} };
@@ -171,6 +115,8 @@ const actions = {
                 state.routes.delete+payload.id
 
                 ).then(response => {
+
+                    console.log(response)
                     success.user = response.data.name;
                     state.errors = {};
 

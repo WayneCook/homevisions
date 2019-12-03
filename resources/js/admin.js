@@ -1,3 +1,4 @@
+import "@babel/polyfill";
 require('./bootstrap');
 
 
@@ -8,25 +9,17 @@ import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 import JsonExcel from 'vue-json-excel'
 
-
-
 import VuetifyConfirm from 'vuetify-confirm'
-
-
-
 import 'vuetify/dist/vuetify.min.css'
 import store from './store'
-// import JsonExcel from 'vue-json-excel'
 
 //Components
-import DashboardComponent from './components/admin/DashboardComponent'
+import DashboardPageComponent from './components/admin/pages/DashboardPageComponent'
 import HomePageComponent from './components/admin/pages/HomePageComponent'
 import AboutPageComponent from './components/admin/pages/AboutPageComponent'
-import MessagesComponent from './components/admin/MessagesComponent'
+import MessagesPageComponent from './components/admin/pages/MessagesPageComponent'
+import CustomLineChart from './components/charts/CustomLineChart'
 
-// import CustomDatatable from './components/datatable/CustomDatatable'
-// import CustomPieChart from './components/charts/CustomPieChart'
-// import CustomLineChart from './components/charts/CustomLineChart'
 
 //Admin components
 import AdminNavComponent from './components/admin/AdminNavComponent'
@@ -41,19 +34,16 @@ Vue.component('downloadExcel', JsonExcel)
 
 const vuetify = new Vuetify()
 Vue.use(VuetifyConfirm, { vuetify })
-// Vue.component('DownloadExcel', JsonExcel)
-// Vue.component('CustomDatatable', CustomDatatable)
-// Vue.component('CustomPieChart', CustomPieChart)
-// Vue.component('CustomLineChart', CustomLineChart)
+
 
 const router = new VueRouter({
     mode: 'history',
     linkExactActiveClass: "active",
     routes: [
-        { path: "/admin", component: DashboardComponent, name: "dashboard" },
+        { path: "/admin/dashboard", component: DashboardPageComponent, name: "dashboard" },
         { path: "/admin/pages/home", component: HomePageComponent, name: "Home-page" },
         { path: "/admin/pages/about", component: AboutPageComponent, name: "about-page" },
-        { path: "/admin/messages", component: MessagesComponent, name: "messages" },
+        { path: "/admin/messages", component: MessagesPageComponent, name: "messages" },
       ]
   })
 
@@ -64,20 +54,14 @@ const app = new Vue({
     vuetify: new Vuetify(),
     router,
     store,
-    // store,
     data: () => ({
         drawer: null
       }),
     components: {
-        DashboardComponent,
+        DashboardPageComponent,
         AdminNavComponent,
         HomePageComponent,
-        AboutPageComponent
-        // AboutComponent,
-        // ContactComponent,
-        // BlogComponent,
-        // CustomDatatable,
-        // CustomPieChart,
-        // CustomLineChart
+        AboutPageComponent,
+        CustomLineChart
     }
 });

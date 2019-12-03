@@ -1,10 +1,9 @@
 <template>
+    <v-row>
 
-        <v-container fluid>
-            <v-row>
-
+        <v-col class="pa-2">
         <v-card elevation="1">
-          <v-card-title class="subtitle-1 font-weight-medium mx-auto">
+          <v-card-title class="title font-weight-medium mx-auto">
             <span>{{ title }}</span>
           </v-card-title>
           <v-divider></v-divider>
@@ -37,13 +36,69 @@
 
           <v-card>
             <v-card-title>
-              <span class="headline">{{ formTitle }}</span>
+              <span class="headline">Message Details</span>
             </v-card-title>
 
             <v-card-text>
               <v-container>
                 <v-row>
-                    {{ showing }}
+
+                    <v-list disabled>
+
+                        <v-list-item>
+                            <v-list-item-icon>
+                                <v-icon>mdi-calendar-outline</v-icon>
+                            </v-list-item-icon>
+                            <v-list-item-content>
+                                <v-list-item-title>Sent On</v-list-item-title>
+                                <v-list-item-subtitle>{{ showing.created_at }}</v-list-item-subtitle>
+                            </v-list-item-content>
+                        </v-list-item>
+
+                        <v-list-item>
+                            <v-list-item-icon>
+                                <v-icon>mdi-account-outline</v-icon>
+                            </v-list-item-icon>
+                            <v-list-item-content>
+                                <v-list-item-title>Name</v-list-item-title>
+                                <v-list-item-subtitle>{{ showing.name }}</v-list-item-subtitle>
+                            </v-list-item-content>
+                        </v-list-item>
+
+                        <v-list-item>
+                            <v-list-item-icon>
+                                <v-icon>mdi-email-outline</v-icon>
+                            </v-list-item-icon>
+                            <v-list-item-content>
+                                <v-list-item-title>Email</v-list-item-title>
+                                <v-list-item-subtitle>{{ showing.email }}</v-list-item-subtitle>
+                            </v-list-item-content>
+                        </v-list-item>
+
+                        <v-list-item>
+                            <v-list-item-icon>
+                                <v-icon>mdi-phone-outline</v-icon>
+                            </v-list-item-icon>
+                            <v-list-item-content>
+                                <v-list-item-title>Phone</v-list-item-title>
+                                <v-list-item-subtitle>{{ showing.phone }}</v-list-item-subtitle>
+                            </v-list-item-content>
+                        </v-list-item>
+
+                        <v-list-item>
+                            <v-list-item-icon>
+                                <v-icon>mdi-message-text-outline</v-icon>
+                            </v-list-item-icon>
+                            <v-list-item-content>
+                                <v-list-item-title>Message</v-list-item-title>
+                                <!-- <v-list-item-subtitle>{{ showing.message }}</v-list-item-subtitle> -->
+                            </v-list-item-content>
+                        </v-list-item>
+                    </v-list>
+
+                    <div class="message-container">
+                        {{ showing.message }}
+                    </div>
                 </v-row>
               </v-container>
             </v-card-text>
@@ -173,9 +228,8 @@
             </v-btn>
         </v-snackbar>
 
-
-        </v-row>
-        </v-container>
+        </v-col>
+    </v-row>
 
 </template>
 
@@ -236,20 +290,6 @@ export default {
     exportSelectedExcel() {
         return this.selected;
     },
-    updateItem() {
-      this.$store.dispatch(`${this.store}/updateItem`).then(success => {
-          this.confirm = false;
-          this.dialog = false;
-        if (success.status) {
-          this.alert('User '+ success.user+' updated successfully.');
-
-          this.fetchItems();
-        } else {
-          this.alert('Please check errors');
-
-        }
-      });
-    },
     fetchItems() {
       return this.$store.dispatch(`${this.store}/fetchItems`, this.options).then(function(success) {
           return success;
@@ -284,13 +324,18 @@ export default {
 
     deleteItem(item) {
 
-      this.$store.dispatch(`${this.store}/deleteItem`, item).then(success => {
-        if (success) {
-          this.formReset();
-          this.fetchItems();
-          this.alert('User '+success.user+' deleted.');
-        }
-      });
+        this.$confirm('Do you really want to delete message?').then(res => {
+            if(res) {
+
+                this.$store.dispatch(`${this.store}/deleteItem`, item).then(success => {
+                    if (success) {
+                    this.formReset();
+                    this.fetchItems();
+                    this.alert('Message from '+success.user+' deleted.');
+                    }
+                });
+            }
+        })
     },
     deleteSelected() {
       this.$store.dispatch(`${this.store}/deleteSelected`, this.selected).then(success => {
@@ -363,6 +408,15 @@ export default {
 <style scoped>
 
 .v-card.v-sheet.theme--light.elevation-1 {
+    width: 100%;
+}
+
+.message-container {
+    height: 180px;
+    overflow: auto;
+    border: 1px solid #a0a0a0;
+    border-radius: 4px;
+    padding: 10px;
     width: 100%;
 }
 

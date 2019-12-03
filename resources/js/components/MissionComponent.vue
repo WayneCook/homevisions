@@ -22,7 +22,7 @@
 
 
                     <div class="my-2">
-                        <v-btn tile class="ma-0 mt-4 contact-btn" large color="hsla(173, 61%, 47%, 1)" dark>Contact us</v-btn>
+                        <v-btn @click="$store.dispatch('app/setContactDialog', true)" tile class="ma-0 mt-4 contact-btn" large color="hsla(173, 61%, 47%, 1)" dark>Contact us</v-btn>
                     </div>
                 </v-card>
 

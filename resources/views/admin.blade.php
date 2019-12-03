@@ -12,11 +12,11 @@
       >
         <v-layout
           align-center
-          justify-center
+          justify-start
         >
 
         <transition name="router-anim" mode="out-in" enter-active-class="animated fadeInLeft" leave-active-class="animated fadeOutRight">
-            <router-view style="animation-duration: .5s"></router-view>
+            <router-view style="animation-duration: .5s; width: 100%"></router-view>
         </transition>
 
         </v-layout>

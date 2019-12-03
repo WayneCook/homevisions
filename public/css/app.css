@@ -5326,13 +5326,6 @@
   position: absolute;
 }
 
-.contact-card {
-  padding-top: 70px !important;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 30px;
-}
-
 h1.message-text {
   margin-bottom: 50px;
 }
@@ -5429,6 +5422,7 @@ h1.message-text {
   color: #71dbce;
   font-weight: 900;
   overflow: hidden;
+  font-family: "Red Hat Display", sans-serif;
 }
 
 .mission-row {
@@ -5540,7 +5534,8 @@ p.logo-pm {
 }
 
 .logo-icon {
-  min-width: 130px;
+  width: 130px;
+  height: 75px;
   margin: 18px 12px;
 }
 
@@ -5631,7 +5626,8 @@ p.logo-pm {
   color: #6e7881;
   font-size: 16px;
   font-weight: 500;
-  line-height: 38px;
+  line-height: 24px;
+  margin-bottom: 20px;
 }
 
 .info-box {
@@ -5652,12 +5648,58 @@ p.logo-pm {
   margin-bottom: 80px;
 }
 
+.footer-container {
+  padding: 100px !important;
+}
+
+.footer-underline {
+  height: 4px;
+  width: 60px;
+  background-color: #76cbc1;
+  display: block;
+  border-radius: 4px;
+  margin: 25px 0px;
+}
+
+.footer-title {
+  font-size: 18px !important;
+  margin-bottom: 10px;
+}
+
+.footer-list {
+  list-style-type: none;
+  padding-left: 0px !important;
+}
+
+.footer-links {
+  text-decoration: none;
+  color: #6f7880 !important;
+  font-size: 14px !important;
+  display: block;
+}
+
+.footer-links:hover {
+  color: #9da5ad !important;
+}
+
+.footer-bottom {
+  background-color: #50789f;
+}
+
+.copyright-text {
+  color: white;
+}
+
 html,
 body {
   width: 100% !important;
   height: 100% !important;
   margin: 0px !important;
   padding: 0px !important;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
 }
 
 .row {
@@ -5700,5 +5742,13 @@ body {
 
 .custom-progress-bar {
   position: absolute;
+}
+
+.app-wrapper {
+  background-color: #f7f7f7;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 99999;
 }
 

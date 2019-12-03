@@ -8,23 +8,18 @@
 @import '~animate.css/animate.css';
 
 
-// $hamburger-layer-width: 30px !default;
-// $hamburger-layer-height: 3px !default;
-// $hamburger-layer-spacing: 6px !default;
-// $hamburger-layer-color: #a4a8ad !default;
-
 @import '~hamburgers/_sass/hamburgers/hamburgers.scss';
 
 
 // Variables
 @import './_variables';
-
 @import './about';
 @import './contact';
 @import './hero';
 @import './mission';
 @import './navigation';
 @import './services';
+@import './footer';
 
 
 html,body
@@ -34,6 +29,10 @@ html,body
     margin: 0px!important;
     padding: 0px!important;
     // overflow: hidden!important;
+}
+
+* {
+    font-family: 'Roboto', sans-serif ;
 }
 
 .row {
@@ -76,6 +75,14 @@ html,body
 
 .custom-progress-bar {
     position: absolute;
+}
+
+.app-wrapper {
+    background-color: #f7f7f7;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99999;
 }
 
 

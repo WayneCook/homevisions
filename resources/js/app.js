@@ -1,4 +1,5 @@
-require('./bootstrap');
+import "@babel/polyfill";
+require('./bootstrap')
 
 
 //Packages
@@ -8,15 +9,15 @@ import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 import Slick from 'vue-slick'
 
-import VueProgressBar from 'vue-progressbar'
+import VueSweetalert2 from 'vue-sweetalert2'
+import 'sweetalert2/dist/sweetalert2.min.css'
 
 
 import 'vuetify/dist/vuetify.min.css'
 import store from './store'
-// import JsonExcel from 'vue-json-excel'
+
 
 //Components
-// import NavComponent from './components/NavComponent'
 import HomeComponent from './components/HomeComponent'
 import AboutComponent from './components/AboutComponent'
 import NavComponent from './components/nav/NavComponent'
@@ -25,27 +26,20 @@ import MissionComponent from './components/MissionComponent'
 import ServicesComponent from './components/ServicesComponent'
 import ContactComponent from './components/ContactComponent'
 import LoginComponent from './components/LoginComponent'
-import DashboardComponent from './components/admin/DashboardComponent'
-// import AboutComponent from './components/About'
-// import ContactComponent from './components/Contact'
-// import BlogComponent from './components/Blog'
-// import CustomDatatable from './components/datatable/CustomDatatable'
-// import CustomPieChart from './components/charts/CustomPieChart'
-// import CustomLineChart from './components/charts/CustomLineChart'
+
 
 //Admin components
 import AdminNavComponent from './components/admin/AdminNavComponent'
 
 
-Vue.component('slick', Slick)
 
 Vue.use(VueRouter)
 Vue.use(Vuetify)
 Vue.use(Vuex)
-// Vue.component('DownloadExcel', JsonExcel)
-// Vue.component('CustomDatatable', CustomDatatable)
-// Vue.component('CustomPieChart', CustomPieChart)
-// Vue.component('CustomLineChart', CustomLineChart)
+
+Vue.use(VueSweetalert2);
+Vue.component('slick', Slick)
+
 
 
 const router = new VueRouter({
@@ -54,32 +48,9 @@ const router = new VueRouter({
     routes: [
         { path: "/", component: HomeComponent, name: "home" },
         { path: "/about", component: AboutComponent, name: "about" },
-        { path: "/admin-login", component: LoginComponent, name: "adminlogin" },
-        { path: "/admin", component: DashboardComponent, name: "dashboard" },
-        // { path: '/about', component: AboutComponent },
-        // { path: '/contact', component: ContactComponent },
-        // { path: '/blog', component: BlogComponent },
+        { path: "/admin-login", component: LoginComponent, name: "adminlogin" }
       ]
   })
-
-
-
-  const options = {
-    color: 'rgb(47, 193, 176)',
-    failedColor: '#874b4b',
-    thickness: '4px',
-    transition: {
-      speed: '0.2s',
-      opacity: '0.6s',
-      termination: 1200
-    },
-    autoRevert: true,
-    location: 'top',
-    inverse: false
-  }
-
-  Vue.use(VueProgressBar, options)
-
 
 
 //Root vue instance
@@ -102,18 +73,10 @@ const app = new Vue({
         ContactComponent,
         Slick,
         AdminNavComponent,
-        LoginComponent,
-        DashboardComponent
-        // AboutComponent,
-        // ContactComponent,
-        // BlogComponent,
-        // CustomDatatable,
-        // CustomPieChart,
-        // CustomLineChart
+        LoginComponent
     },
     mounted () {
         //  [App.vue specific] When App.vue is finish loading finish the progress bar
-        this.$Progress.finish()
         setTimeout(() => { this.loading = false }, 2000)
       },
       created () {

@@ -31,7 +31,7 @@
 
         <v-container class="about-services-container custom-container">
             <v-row>
-                <v-col cols="12" md="6" class="d-flex justify-center align-center">
+                <v-col cols="12" md="6">
                     <div class="mb-4 info-box">
                         <h1 class="title-text">{{ getData[2].title }}
                             <span class="title-underline"></span>
@@ -53,7 +53,33 @@
         </v-container>
 
         <!-- Contact section -->
-        <contact-component></contact-component>
+
+        <v-container fluid class="pa-0">
+
+            <v-row>
+                <v-img
+                    src="/images/contact_mountians.jpg"
+                    lazy-src="/images/contact_mountians.jpg"
+                    min-height="680"
+                >
+
+                <v-row class="mb-8">
+                    <v-col class="text-center">
+                        <h1 class="title-text ma-8">Leave us a message</h1>
+                    </v-col>
+                </v-row>
+
+                <v-row>
+                    <v-col>
+
+                    <contact-component></contact-component>
+                    </v-col>
+                </v-row>
+
+                </v-img>
+
+            </v-row>
+        </v-container>
 
     </v-container>
 
@@ -64,24 +90,22 @@
 import ContactComponent from './ContactComponent'
 import MissionComponent from './MissionComponent'
 import ServicesComponent from './ServicesComponent'
+import DialogContactComponent from './DialogContactComponent'
 
 export default {
     data() {
         return {
-            // loaded: false
+            //
         }
     },
     components: {
             ContactComponent,
             MissionComponent,
             ServicesComponent,
+            DialogContactComponent
         },
-        created() {
-
-            // this.$store.dispatch('app/fetchData').then((res) => {
-            //     if(res) { this.loaded = true }
-            // });
-
+        methods: {
+            //
         },
         computed: {
             getData() {
@@ -90,10 +114,20 @@ export default {
             loaded() {
                 return this.$store.getters['app/getLoaded']
             }
-        }
+        },
+
 }
 </script>
 
 <style>
+
+@media only screen and (max-width: 360px) {
+
+  .bottom-banner h1 {
+      font-size: 38px;
+      font-family: "Red Hat Display", sans-serif;
+  }
+
+}
 
 </style>

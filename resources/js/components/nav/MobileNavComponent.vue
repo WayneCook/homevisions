@@ -84,7 +84,7 @@ export default {
     data() {
         return {
             drawer: false,
-            links: [{text: "Home", href: "/", icon: "mdi-home-circle-outline"}, {text:"About", href: "/about", icon: "mdi-information-outline"}, {text: "Services", href: "/services", icon: "mdi-progress-wrench"}]
+            links: [{text: "Home", href: "/", icon: "mdi-home-circle-outline"}, {text:"About", href: "/about", icon: "mdi-information-outline"}]
         }
     },
     components: {
@@ -148,7 +148,7 @@ export default {
         top: 0;
         left: 0;
         margin: 5px;
-        z-index: 9999;
+        z-index: 25;
     }
 
     .logo-wrapper {

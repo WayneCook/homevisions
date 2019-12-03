@@ -37,12 +37,12 @@
                     </v-card-text>
 
                     <v-card-actions>
-                        <v-btn
+                        <!-- <v-btn
                         text
                         color="rgb(89, 128, 167)"
                         >
                             Learn More
-                        </v-btn>
+                        </v-btn> -->
                     </v-card-actions>
                 </v-card>
 
@@ -110,6 +110,7 @@ export default {
                 //options can be used from the plugin documentation
                 // slidesToShow: 1,
                 mobileFirst: true,
+                centerPadding: '10px',
                 infinite: true,
                 accessibility: true,
                 adaptiveHeight: false,
@@ -125,21 +126,24 @@ export default {
                         slidesToScroll: 1,
                         infinite: true,
                         dots: true,
-                        arrows: false
+                        arrows: false,
+                        centerPadding: '10px',
                     }
                     },
                     {
                     breakpoint: 700,
                     settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 1
+                        slidesToScroll: 1,
+                        centerPadding: '10px',
                     }
                     },
                     {
                     breakpoint: 480,
                     settings: {
                         slidesToShow: 1,
-                        slidesToScroll: 1
+                        slidesToScroll: 1,
+                        centerPadding: '10px',
                     }
                     }
                         // You can unslick at a given breakpoint now by adding:
@@ -167,6 +171,10 @@ export default {
 
 .custom-card-text {
     height: 300px;
+}
+
+div.slick-slide {
+    padding: 20px;
 }
 
 </style>

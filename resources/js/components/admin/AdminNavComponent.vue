@@ -2,17 +2,17 @@
 <div>
 
 <v-snackbar
-      v-model="snackBar.active"
+    v-model="snackBar.active"
+>
+    {{ snackBar.message }}
+    <v-btn
+    color="blue"
+    text
+    @click="$store.dispatch('admin/closeSnack')"
     >
-      {{ snackBar.message }}
-      <v-btn
-        color="blue"
-        text
-        @click="$store.dispatch('admin/closeSnack')"
-      >
-        Close
-      </v-btn>
-    </v-snackbar>
+    Close
+    </v-btn>
+</v-snackbar>
 
 
     <v-navigation-drawer
@@ -20,13 +20,25 @@
     app
     >
 
-    <v-list>
+     <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="title">
+            Admin
+          </v-list-item-title>
+          <v-list-item-subtitle>
+            Menu
+          </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
 
+      <v-divider></v-divider>
+
+    <v-list>
         <v-list-item-group>
 
-        <v-list-item>
+        <v-list-item to='/admin/dashboard'>
             <v-list-item-icon>
-                <v-icon>mdi-home-outline</v-icon>
+                <v-icon>mdi-view-dashboard-outline</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
                 <v-list-item-title>Dashboard</v-list-item-title>
@@ -97,7 +109,7 @@
             </span>
 
 
-             <v-btn @click="logout()" class="ma-2" color="orange darken-2" text dark>
+             <v-btn @click="logout()" class="ma-2" text dark>
                 <v-icon dark left>mdi-logout</v-icon>logout
             </v-btn>
 
@@ -112,7 +124,7 @@
         props: ['user'],
         data(){
             return {
-                drawer: false,
+                drawer: true,
                 snackbar: false
             }
         },

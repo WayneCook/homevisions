@@ -1,6 +1,7 @@
 const state = {
     data: [],
-    loaded: false
+    loaded: false,
+    contactDialog: false
   }
 
 const mutations = {
@@ -10,6 +11,9 @@ const mutations = {
     },
     setLoaded( state ) {
         state.loaded = true
+    },
+    setContactDialog( state, payload ) {
+        state.contactDialog = payload
     }
 
 }
@@ -22,6 +26,9 @@ const getters = {
     },
     getLoaded( state ) {
         return state.loaded
+    },
+    getContactDialog( state ) {
+        return state.contactDialog
     }
 
 }
@@ -59,10 +66,7 @@ const getters = {
 
     ).then((response) => {
 
-        console.log(response);
         window.location.href = "/admin";
-
-
     })
     .catch((error) => {
 
@@ -74,6 +78,9 @@ const getters = {
 
     });
 
+    },
+    setContactDialog({ commit }, payload) {
+        commit('setContactDialog', payload);
     }
 
   }

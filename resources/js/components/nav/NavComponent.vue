@@ -19,31 +19,42 @@
                 </div>
                 <div class="logo-text">
                     <h2 class="logo-home">home</h2>
-                    <h2 class="logo-visions">visions</h2>
+                    <h2 class="logo-visions">vision</h2>
                     <p ma-0 class="logo-pm">Property Management</p>
                 </div>
 
             <ul class="flex-grow-1 d-flex align-center justify-end">
                 <link-component :link="link" :key="i" v-for=" (link, i) in list"></link-component>
             </ul>
-                    <v-btn class="ml-4" tile dark color="hsla(173, 61%, 47%, 1)">contact</v-btn>
+                    <v-btn @click="$store.dispatch('app/setContactDialog', true)" class="ml-4" tile dark color="hsla(173, 61%, 47%, 1)">contact us</v-btn>
         </v-container>
+
+        <v-dialog
+            v-model="this.$store.getters['app/getContactDialog']"
+            max-width="450"
+            persistent
+            >
+            <dialog-contact-component></dialog-contact-component>
+        </v-dialog>
+
     </v-container>
 </template>
 
 <script>
 
 import LinkComponent from './LinkComponent'
+import DialogContactComponent from '../DialogContactComponent'
 
 export default {
     data() {
         return {
 
-            list: [{text: "Home", href: "/"}, {text:"About", href: "/about"}, {text: "Services", href: "/services"}]
+            list: [{text: "Home", href: "/"}, {text:"About", href: "/about"}]
         }
     },
     components: {
-        LinkComponent
+        LinkComponent,
+        DialogContactComponent
     }
 }
 
@@ -58,16 +69,10 @@ export default {
 
     .container-wrapper {
         position: relative;
-        z-index: 9999;
 
     }
 
     .main-nav {
-        position: relative;
-        right: 0px;
-        width: 100%;
-        text-align: right;
-        z-index: 9999;
         margin: auto;
     }
 

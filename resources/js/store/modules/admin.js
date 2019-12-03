@@ -1,11 +1,15 @@
 const state = {
     data: [],
+    loaded: false,
     sections: [],
     snackBar: {
         active: false,
         message: ''
-
-    }
+    },
+    views: {},
+    viewCount: 0,
+    viewsToday: 0,
+    messageCount: 0
   }
 
 const mutations = {
@@ -16,6 +20,18 @@ const mutations = {
     setSections( state, payload ) {
         state.sections = payload;
     },
+    setViews( state, payload ) {
+        state.views = payload;
+    },
+    setViewCount( state, payload ) {
+        state.viewCount = payload;
+    },
+    setViewsToday( state, payload ) {
+        state.viewsToday = payload;
+    },
+    setMessageCount( state, payload ) {
+        state.messageCount = payload;
+    },
     setErrors( state, payload ) {
         state.errors = payload;
     },
@@ -23,8 +39,11 @@ const mutations = {
         state.snackBar.active = true
         state.snackBar.message = payload
     },
-    closeSnack() {
+    closeSnack( state ) {
         state.snackBar.active = false
+    },
+    loaded( state ) {
+        state.loaded = true
     }
 
 }
@@ -35,11 +54,26 @@ const getters = {
     adminData( state ) {
         return state.data;
     },
+    getViews( state ) {
+        return state.views;
+    },
+    getViewCount( state ) {
+        return state.viewCount;
+    },
+    getViewsToday( state ) {
+        return state.viewsToday;
+    },
+    getMessageCount( state ) {
+        return state.messageCount;
+    },
     getSections( state ) {
         return state.sections;
     },
     getSnackBar( state ) {
         return state.snackBar;
+    },
+    loaded( state ) {
+        return state.loaded;
     },
 
 }
@@ -55,6 +89,11 @@ const getters = {
         ).then((response) => {
             commit('setData', response.data);
             commit('setSections', response.data.sections);
+            commit('setViews', response.data.views);
+            commit('setViewCount', response.data.view_count);
+            commit('setViewsToday', response.data.views_today);
+            commit('setMessageCount', response.data.message_count);
+            commit('loaded');
         })
         .catch((error) => {
 

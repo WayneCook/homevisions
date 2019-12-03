@@ -3,8 +3,12 @@
 namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use App\Message;
+use Helper;
+use App\Mail\MessageSent;
+use Mail;
 
 class MessageController extends Controller
 {
@@ -23,9 +27,26 @@ class MessageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+
+
+        $validator = Validator::make(request()->all(), [
+            'name' => 'bail|required|string|max:50|min:3',
+            'email' => 'bail|email|max:50',
+            'phone' => 'bail|max:25',
+            'message' => 'bail|required|string|max:1000|min:3',
+        ])->validate();
+
+        $new_message = new Message();
+        $new_message->fill($request->all())->save();
+
+
+        // Send email
+        $to = explode(',', preg_replace('/\s+/', '', env('ADMIN_EMAILS')));
+        Mail::to($to)->send(new MessageSent($new_message));
+
+        return $new_message->name;
     }
 
     /**
@@ -36,7 +57,8 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+
     }
 
     /**
@@ -79,9 +101,13 @@ class MessageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Message $message)
     {
-        //
+
+        $message->delete();
+
+        return $message;
+        // return "deleted";
     }
 
     public function exportExcel()
