@@ -5,7 +5,7 @@
     <v-img
 
     srcset="images/houses_about_small.jpg 400w, images/houses_about.jpg 800w"
-    src="images/houses_about_small.jpg"
+    src="images/houses_about.jpg"
     sizes="(max-width: 400px) 280px,
             (max-width: 800px) 440px,
             800px"
