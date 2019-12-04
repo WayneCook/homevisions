@@ -27,12 +27,6 @@ import ServicesComponent from './components/ServicesComponent'
 import ContactComponent from './components/ContactComponent'
 import LoginComponent from './components/LoginComponent'
 
-
-//Admin components
-import AdminNavComponent from './components/admin/AdminNavComponent'
-
-
-
 Vue.use(VueRouter)
 Vue.use(Vuetify)
 Vue.use(Vuex)
@@ -72,7 +66,6 @@ const app = new Vue({
         ServicesComponent,
         ContactComponent,
         Slick,
-        AdminNavComponent,
         LoginComponent
     },
     mounted () {
