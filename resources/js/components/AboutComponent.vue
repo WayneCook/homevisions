@@ -2,8 +2,9 @@
 
 <v-container v-if="loaded" fluid class="pa-0">
 
-    <!-- <v-img
+    <v-img
     src="images/houses_about.jpg"
+    lazy-src="images/houses_about.jpg"
     gradient="to top, rgba(247, 247, 247, 0.19), rgb(247, 247, 247)"
     min-height="700"
     max-height="800"
@@ -34,6 +35,7 @@
 
     <v-img
     src="images/houses_about_small.jpg"
+    lazy-src="images/houses_about_small.jpg"
     gradient="to top, rgba(247, 247, 247, 0.19), rgb(247, 247, 247)"
     min-height="700"
     max-height="800"
@@ -60,7 +62,7 @@
                 </v-col>
             </v-row>
         </v-container>
-    </v-img> -->
+    </v-img>
 
 </v-container>
 
@@ -82,14 +84,7 @@ export default {
             loaded() {
                 return this.$store.getters['app/getLoaded'];
             }
-        },
-         created() {
-
-            // this.$store.dispatch('app/fetchData').then((res) => {
-            //     if(res) { this.loaded = true }
-            // });
-        },
-
+        }
 }
 </script>
 

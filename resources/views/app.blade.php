@@ -9,8 +9,8 @@
     </head>
     <body>
 
-        <div class="app-wrapper">
-            </div>
+        <div class="app-wrapper"></div>
+
         <v-app id="app">
             <v-progress-linear
             class="custom-progress-bar"
