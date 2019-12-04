@@ -41,7 +41,7 @@
         fixed
         height="100vh"
         temporary
-        src="images/menu_image.jpg"
+        src="images/menu_image_small.jpg"
         >
 
         <v-list class="link-list">
