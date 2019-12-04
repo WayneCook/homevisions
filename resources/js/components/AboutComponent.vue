@@ -4,9 +4,10 @@
 
     <v-img
 
-    srcset="/images/houses_about_small.jpg 400w, /images/houses_about.jpg 800w"
+    srcset="/images/houses_about_small.jpg 600w, /images/houses_about.jpg 800w"
     src="/images/houses_about_small.jpg"
-    sizes="100vw"
+    sizes="(min-width: 600px) 600px,
+   100vw"
     gradient="to top, rgba(247, 247, 247, 0.19), rgb(247, 247, 247)"
     min-height="700"
     max-height="800"
