@@ -8,12 +8,7 @@ import Vuetify from 'vuetify'
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 import Slick from 'vue-slick'
-
 import VueSweetalert2 from 'vue-sweetalert2'
-import 'sweetalert2/dist/sweetalert2.min.css'
-
-
-import 'vuetify/dist/vuetify.min.css'
 import store from './store'
 
 
@@ -30,7 +25,6 @@ import LoginComponent from './components/LoginComponent'
 Vue.use(VueRouter)
 Vue.use(Vuetify)
 Vue.use(Vuex)
-
 Vue.use(VueSweetalert2);
 Vue.component('slick', Slick)
 
@@ -92,6 +86,10 @@ const app = new Vue({
         })
       }
 });
+
+
+
+
 
 
 
