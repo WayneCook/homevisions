@@ -35,7 +35,7 @@
 
                 <v-container class="custom-container footer-container">
                     <v-row>
-                         <v-col class="d-flex justify-center cols-12 col-sm-6">
+                         <v-col class="d-flex justify-center cols-12 col-sm-6 mb-10 mb-0">
                             <div>
                                 <v-img class="mx-auto" src="/images/vision_logo.png" width="165" lazy-src="/images/vision_logo.png"></v-img>
                             </div>
@@ -47,13 +47,13 @@
                                 <h4 class="title-text footer-title">Sitemap</h4>
                                 <ul class="footer-list">
                                     <li>
-                                        <a class="para footer-links" href="/">Home</a>
+                                        <a class="para footer-links text-center" href="/">Home</a>
                                     </li>
                                     <li>
-                                        <a class="para footer-links" href="/">About</a>
+                                        <a class="para footer-links text-center" href="/">About</a>
                                     </li>
                                     <li>
-                                        <a class="para footer-links" href="/admin/dashboard">Admin</a>
+                                        <a class="para footer-links text-center" href="/admin/dashboard">Admin</a>
                                     </li>
                                 </ul>
                             </div>

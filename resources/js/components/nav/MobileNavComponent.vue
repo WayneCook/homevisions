@@ -3,19 +3,11 @@
 
         <div @click="drawer = !drawer"
         v-bind:class="{ 'is-active': drawer}"
-
-        class="hamburger-container hamburger hamburger--3dy">
-
-            <!-- <div class="hamburger hamburger--collapse">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </div> -->
-
+        class="hamburger-container hamburger hamburger--3dy"
+        >
 
         <v-icon large>{{ hamburger }}</v-icon>
         </div>
-
 
         <v-container class="mobile-nav custom-container d-flex justify-center align-center">
 
@@ -36,7 +28,7 @@
                 </div>
                 <div class="logo-text mx-auto">
                     <h2 class="logo-home">home</h2>
-                    <h2 class="logo-visions">visions</h2>
+                    <h2 class="logo-visions">vision</h2>
                     <p ma-0 class="logo-pm">Property Management</p>
                 </div>
             </div>
@@ -54,9 +46,6 @@
 
         <v-list class="link-list">
             <v-list-item-group>
-                <div class="d-flex justify-end">
-                    <!-- <v-icon size="28" @click="drawer = !drawer" class="ma-4 align-self-end" color="#b8b8b8">mdi-close-circle-outline</v-icon> -->
-                </div>
 
                 <v-list-item
                 v-for="(link, i) in links"

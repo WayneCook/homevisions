@@ -3,10 +3,13 @@
 <v-container v-if="loaded" fluid class="pa-0">
 
     <v-img
-    src="/images/houses_about.jpg"
-    lazy-src="/images/houses_about.jpg"
+
+    srcset="/images/houses_about_small.jpg 400w, /images/houses_about.jpg 800w"
+    src="/images/houses_about_small.jpg"
+    sizes="100vw"
     gradient="to top, rgba(247, 247, 247, 0.19), rgb(247, 247, 247)"
-    height="700"
+    min-height="700"
+    max-height="800"
     >
 
 <v-container class="custom-container mt-10">
