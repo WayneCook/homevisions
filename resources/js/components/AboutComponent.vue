@@ -2,7 +2,7 @@
 
 <v-container v-if="loaded" fluid class="pa-0">
 
-    <v-img
+    <!-- <v-img
     src="images/houses_about.jpg"
     gradient="to top, rgba(247, 247, 247, 0.19), rgb(247, 247, 247)"
     min-height="700"
@@ -60,7 +60,7 @@
                 </v-col>
             </v-row>
         </v-container>
-    </v-img>
+    </v-img> -->
 
 </v-container>
 
