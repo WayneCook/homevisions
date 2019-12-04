@@ -4,11 +4,9 @@
 
     <v-img
 
-    srcset="images/houses_about_small.jpg 400w, images/houses_about.jpg 800w"
+    srcset="images/houses_about_small.jpg 500w, images/houses_about.jpg 600w"
     src="images/houses_about.jpg"
-    sizes="(max-width: 400px) 280px,
-            (max-width: 800px) 440px,
-            800px"
+    sizes="100vw"
     gradient="to top, rgba(247, 247, 247, 0.19), rgb(247, 247, 247)"
     min-height="700"
     max-height="800"
@@ -18,7 +16,7 @@
 
     <v-row>
 
-        <v-col class="about-col-left" >
+        <v-col class="about-col-left">
 
             <v-card
             tile
