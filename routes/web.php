@@ -11,26 +11,9 @@
 |
 */
 
-
-// Route::get('validate', 'AuthLoginController');
-
-// Route::get('/get-time', function () {
-//     dd(NOW());
-// });
-
-Route::get('/emailtest', function()
-{
-	$beautymail = app()->make(Snowfire\Beautymail\Beautymail::class);
-    $beautymail->send('emails.test', [], function($message)
-    {
-        $message
-			->from('bar@example.com')
-			->to('foo@example.com', 'John Smith')
-			->subject('Welcome!');
-    });
-
-});
-
+// Route::get('/admin/dashboard', function () {
+//     return view('admin');
+// })->name('admin-login')->middleware('guest');
 
 Auth::routes();
 
@@ -58,7 +41,6 @@ Route::get('/admin/{pages}', function () {
 Route::get('/admin-login', function () {
     return view('app');
 })->name('admin-login')->middleware('guest');
-
 
 
 Route::get('/{vue_capture?}', function () {

@@ -41,7 +41,7 @@
         fixed
         height="100vh"
         temporary
-
+        src="/images/menu_image_small.jpg"
         >
 
         <v-list class="link-list">
@@ -136,7 +136,7 @@ export default {
         position: absolute;
         top: 0;
         left: 0;
-        margin: 5px;
+        margin: 20px;
         z-index: 25;
     }
 
