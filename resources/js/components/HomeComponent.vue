@@ -7,7 +7,7 @@
                 src="/images/home_house.jpg"
                 height="500"
                 sizes="(max-width: 600px) 600px,
-            (max-width: 800px) 600px"
+            (max-width: 800px) 800px"
                 >
                 </v-img>
             </v-col>
