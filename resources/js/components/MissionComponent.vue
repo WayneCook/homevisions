@@ -36,12 +36,22 @@
             >
 
             <v-img
-            src="/images/handshake.jpg"
-            srcset="/images/handshake_small.jpg 600w, /images/handshake.jpg 800w"
-            class="services-bg"
+            src="/images/handshake_small.jpg"
+            lazy-src="/images/handshake_small.jpg"
+            class="services-bg d-flex d-sm-none"
             height="400"
             >
             </v-img>
+
+            <v-img
+            src="/images/handshake.jpg"
+            lazy-src="/images/handshake.jpg"
+            class="services-bg d-none d-sm-flex"
+            height="400"
+            >
+            </v-img>
+
+
             </v-col>
 
         </v-row>

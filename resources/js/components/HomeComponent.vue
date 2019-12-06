@@ -3,11 +3,19 @@
         <v-row pa-0 class="hero-container">
             <v-col class="hero-col">
                 <v-img
-                srcset="/images/home_house_small.jpg 600w, /images/home_house.jpg 800w"
                 src="/images/home_house.jpg"
                 height="500"
+                class="d-none d-sm-flex"
                 >
                 </v-img>
+
+                <v-img
+                src="/images/home_house_small.jpg"
+                height="500"
+                class="d-flex d-sm-none"
+                >
+                </v-img>
+
             </v-col>
         </v-row>
 
@@ -53,8 +61,27 @@
             <v-row>
                 <v-img
                 src="/images/contact_mountians.jpg"
-                srcset="/images/contact_mountians_small.jpg 600w, /images/contact_mountians.jpg 800w"
+                lazy-src="/images/contact_mountians.jpg"
                 min-height="680"
+                class="d-none d-sm-flex"
+                >
+                <v-row class="mb-8">
+                    <v-col class="text-center">
+                        <h1 class="title-text ma-8">Leave us a message</h1>
+                    </v-col>
+                </v-row>
+                <v-row>
+                    <v-col>
+                        <contact-component></contact-component>
+                    </v-col>
+                </v-row>
+                </v-img>
+
+                <v-img
+                src="/images/contact_mountians_small.jpg"
+                lazy-src="/images/contact_mountians_small.jpg"
+                min-height="680"
+                class="d-flex d-sm-none"
                 >
                 <v-row class="mb-8">
                     <v-col class="text-center">
