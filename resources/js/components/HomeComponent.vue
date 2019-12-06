@@ -4,6 +4,7 @@
             <v-col class="hero-col">
                 <v-img
                 src="/images/home_house.jpg"
+                lazy-src="/images/home_house.jpg"
                 height="500"
                 class="d-none d-sm-flex"
                 >
@@ -11,6 +12,7 @@
 
                 <v-img
                 src="/images/home_house_small.jpg"
+                lazy-src="/images/home_house_small.jpg"
                 height="500"
                 class="d-flex d-sm-none"
                 >

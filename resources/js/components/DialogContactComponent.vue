@@ -210,7 +210,7 @@ export default {
 
 .title-text {
     margin: auto;
-    font-size: 24px;
+    margin-top: 18px;
 }
 
 
