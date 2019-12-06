@@ -63,8 +63,6 @@
                 <div>
                     <slick ref="slick" :options="slickOptions">
                     <div :key="i" v-for="(card, i) in serviceCards">
-
-
                     <v-card
                     class="service-cards"
                     max-width="325"

@@ -9,20 +9,29 @@
     </head>
     <body>
 
-        {{-- <div class="app-wrapper">
+        <div class="app-wrapper">
             <div class="loader-container">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="161px" height="161px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
-                    <circle cx="50" cy="50" r="4.25111" fill="none" stroke="#50789f" stroke-width="2">
-                        <animate attributeName="r" repeatCount="indefinite" dur="1s" values="0;40" keyTimes="0;1" keySplines="0 0.2 0.8 1" calcMode="spline" begin="-0.5s"></animate>
-                        <animate attributeName="opacity" repeatCount="indefinite" dur="1s" values="1;0" keyTimes="0;1" keySplines="0.2 0 0.8 1" calcMode="spline" begin="-0.5s"></animate>
-                    </circle>
-                    <circle cx="50" cy="50" r="27.3557" fill="none" stroke="#76cbc1" stroke-width="2">
-                        <animate attributeName="r" repeatCount="indefinite" dur="1s" values="0;40" keyTimes="0;1" keySplines="0 0.2 0.8 1" calcMode="spline"></animate>
-                        <animate attributeName="opacity" repeatCount="indefinite" dur="1s" values="1;0" keyTimes="0;1" keySplines="0.2 0 0.8 1" calcMode="spline"></animate>
-                    </circle>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                    <rect x="19" y="19" width="20" height="20" fill="#50789f">
+                      <animate attributeName="fill" values="#76cbc1;#50789f;#50789f" keyTimes="0;0.125;1" dur="1.5873015873015872s" repeatCount="indefinite" begin="0s" calcMode="discrete"></animate>
+                    </rect><rect x="40" y="19" width="20" height="20" fill="#50789f">
+                      <animate attributeName="fill" values="#76cbc1;#50789f;#50789f" keyTimes="0;0.125;1" dur="1.5873015873015872s" repeatCount="indefinite" begin="0.1984126984126984s" calcMode="discrete"></animate>
+                    </rect><rect x="61" y="19" width="20" height="20" fill="#50789f">
+                      <animate attributeName="fill" values="#76cbc1;#50789f;#50789f" keyTimes="0;0.125;1" dur="1.5873015873015872s" repeatCount="indefinite" begin="0.3968253968253968s" calcMode="discrete"></animate>
+                    </rect><rect x="19" y="40" width="20" height="20" fill="#50789f">
+                      <animate attributeName="fill" values="#76cbc1;#50789f;#50789f" keyTimes="0;0.125;1" dur="1.5873015873015872s" repeatCount="indefinite" begin="1.3888888888888888s" calcMode="discrete"></animate>
+                    </rect><rect x="61" y="40" width="20" height="20" fill="#50789f">
+                      <animate attributeName="fill" values="#76cbc1;#50789f;#50789f" keyTimes="0;0.125;1" dur="1.5873015873015872s" repeatCount="indefinite" begin="0.5952380952380952s" calcMode="discrete"></animate>
+                    </rect><rect x="19" y="61" width="20" height="20" fill="#50789f">
+                      <animate attributeName="fill" values="#76cbc1;#50789f;#50789f" keyTimes="0;0.125;1" dur="1.5873015873015872s" repeatCount="indefinite" begin="1.1904761904761905s" calcMode="discrete"></animate>
+                    </rect><rect x="40" y="61" width="20" height="20" fill="#50789f">
+                      <animate attributeName="fill" values="#76cbc1;#50789f;#50789f" keyTimes="0;0.125;1" dur="1.5873015873015872s" repeatCount="indefinite" begin="0.9920634920634921s" calcMode="discrete"></animate>
+                    </rect><rect x="61" y="61" width="20" height="20" fill="#50789f">
+                      <animate attributeName="fill" values="#76cbc1;#50789f;#50789f" keyTimes="0;0.125;1" dur="1.5873015873015872s" repeatCount="indefinite" begin="0.7936507936507936s" calcMode="discrete"></animate>
+                    </rect>
                 </svg>
             </div>
-        </div> --}}
+        </div>
 
         <v-app id="app">
             <v-progress-linear
@@ -63,7 +72,7 @@
                                         <a class="para footer-links text-center" href="/">Home</a>
                                     </li>
                                     <li>
-                                        <a class="para footer-links text-center" href="/">About</a>
+                                        <a class="para footer-links text-center" href="/about">About</a>
                                     </li>
                                     <li>
                                         <a class="para footer-links text-center" href="/admin/dashboard">Admin</a>
@@ -88,11 +97,11 @@
         <script src="{{ asset('js/app.js') }}"></script>
 
 
-        {{-- <script>
+        <script>
             $( document ).ready(function() {
                 $('.app-wrapper').delay(1500).fadeOut();
             });
-        </script> --}}
+        </script>
 
     </body>
 </html>
