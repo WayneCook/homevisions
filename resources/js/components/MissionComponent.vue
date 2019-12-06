@@ -2,13 +2,7 @@
 
     <v-container class="pa-0 custom-container">
         <v-row class="mission-row">
-            <v-col class="pa-4 mission-left-col"
-            pa='4'
-            md='6'
-            lg='6'
-            sm='12'
-            >
-
+            <v-col class="pa-4 mission-left-col col-12 col-md-6">
                 <v-card
                 tile
                 elevation="8"
@@ -28,12 +22,7 @@
 
             </v-col>
 
-            <v-col class="pt-8 md-12 lg-6"
-            pa='4'
-            md='6'
-            lg='6'
-            sm='12'
-            >
+            <v-col class="pt-8 col-12 col-md-6">
 
             <v-img
             src="/images/handshake_small.jpg"
