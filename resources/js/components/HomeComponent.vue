@@ -4,10 +4,8 @@
             <v-col class="hero-col">
                 <v-img
                 srcset="/images/home_house_small.jpg 600w, /images/home_house.jpg 800w"
-                src="/images/home_house.jpg"
+                src="/images/home_house_small.jpg"
                 height="500"
-                sizes="(max-width: 600px) 600w,
-            (max-width: 800px) 800w"
                 >
                 </v-img>
             </v-col>
