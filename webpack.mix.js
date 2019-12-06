@@ -1,4 +1,9 @@
+
+
+
 const mix = require('laravel-mix');
+// const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
+// var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 /*
  |--------------------------------------------------------------------------
@@ -12,8 +17,9 @@ const mix = require('laravel-mix');
  */
 
 
-mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+    mix.js('resources/js/app.js', 'public/js')
+    .sass('resources/sass/app.scss', 'public/css')
+
 
    mix.js('resources/js/admin.js', 'public/js');
 
@@ -23,15 +29,4 @@ mix.js('resources/js/app.js', 'public/js')
 });
 
 
-// mix.js('resources/js/app.js', 'public/js')
-//     /* extract all vendor */
-//     .extract([
-//         'axios', 'vue', 'vuetify'
-//     ])
-// mix.sass('resources/sass/app.scss', 'public/css')
-// mix.sourceMaps()
-// if (mix.inProduction()) {
-//     mix.version()
-//     mix.disableNotifications()
-// }
 

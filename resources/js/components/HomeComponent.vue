@@ -1,17 +1,14 @@
 <template>
     <v-container v-if="loaded" fluid class="pa-0">
         <v-row pa-0 class="hero-container">
-
-            <v-col class="hero-col" >
-
+            <v-col class="hero-col">
                 <v-img
-                    src="/images/home_house.jpg"
-                    lazy-src="/images/home_house.jpg"
-                    height="500"
+                src="/images/home_house.jpg"
+                srcset="/images/home_house_small.jpg 600w, /images/home_house.jpg 800w"
+                height="500"
                 >
                 </v-img>
             </v-col>
-
         </v-row>
 
         <v-container fluid class="bottom-banner">
@@ -27,7 +24,6 @@
 
         <!-- Services section -->
         <services-component></services-component>
-
 
         <v-container class="about-services-container custom-container">
             <v-row>
@@ -53,69 +49,51 @@
         </v-container>
 
         <!-- Contact section -->
-
         <v-container fluid class="pa-0">
-
             <v-row>
                 <v-img
-                    src="/images/contact_mountians.jpg"
-                    lazy-src="/images/contact_mountians.jpg"
-                    min-height="680"
+                src="/images/contact_mountians.jpg"
+                srcset="/images/contact_mountians_small.jpg 600w, /images/contact_mountians.jpg 800w"
+                min-height="680"
                 >
-
                 <v-row class="mb-8">
                     <v-col class="text-center">
                         <h1 class="title-text ma-8">Leave us a message</h1>
                     </v-col>
                 </v-row>
-
                 <v-row>
                     <v-col>
-
-                    <contact-component></contact-component>
+                        <contact-component></contact-component>
                     </v-col>
                 </v-row>
-
                 </v-img>
-
             </v-row>
         </v-container>
-
     </v-container>
 
 </template>
 
 <script>
-
 import ContactComponent from './ContactComponent'
 import MissionComponent from './MissionComponent'
 import ServicesComponent from './ServicesComponent'
 import DialogContactComponent from './DialogContactComponent'
 
 export default {
-    data() {
-        return {
-            //
-        }
-    },
     components: {
-            ContactComponent,
-            MissionComponent,
-            ServicesComponent,
-            DialogContactComponent
+        ContactComponent,
+        MissionComponent,
+        ServicesComponent,
+        DialogContactComponent
+    },
+    computed: {
+        getData() {
+            return this.$store.getters['app/getData'].sections.reduce((obj, item) => (obj[item.section_id] = item, obj) ,{})
         },
-        methods: {
-            //
-        },
-        computed: {
-            getData() {
-                return this.$store.getters['app/getData'].sections.reduce((obj, item) => (obj[item.section_id] = item, obj) ,{})
-            },
-            loaded() {
-                return this.$store.getters['app/getLoaded']
-            }
-        },
-
+        loaded() {
+            return this.$store.getters['app/getLoaded']
+        }
+    }
 }
 </script>
 

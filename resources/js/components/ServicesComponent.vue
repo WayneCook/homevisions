@@ -7,8 +7,8 @@
 
         <v-row class="services-container">
             <v-img
-                src="/images/work_desk2.jpg"
-                lazy-src="/images/work_desk2.jpg"
+                src="/images/work_desk.jpg"
+                srcset="/images/work_desk_small.jpg 600w, /images/work_desk.jpg 800w"
                 gradient="to top, rgba(247, 247, 247, 0.19), rgb(247, 247, 247)"
                 max-height=700
             >

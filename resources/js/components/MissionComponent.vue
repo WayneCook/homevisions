@@ -35,11 +35,11 @@
             sm='12'
             >
 
-                <v-img
-                src="/images/handshake.jpg"
-                lazy-src="/images/handshake.jpg"
-                class="services-bg"
-                height="400"
+            <v-img
+            src="/images/handshake.jpg"
+            srcset="/images/handshake_small.jpg 600w, /images/handshake.jpg 800w"
+            class="services-bg"
+            height="400"
             >
             </v-img>
             </v-col>

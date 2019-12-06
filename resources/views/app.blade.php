@@ -9,7 +9,20 @@
     </head>
     <body>
 
-        <div class="app-wrapper"></div>
+        {{-- <div class="app-wrapper">
+            <div class="loader-container">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="161px" height="161px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                    <circle cx="50" cy="50" r="4.25111" fill="none" stroke="#50789f" stroke-width="2">
+                        <animate attributeName="r" repeatCount="indefinite" dur="1s" values="0;40" keyTimes="0;1" keySplines="0 0.2 0.8 1" calcMode="spline" begin="-0.5s"></animate>
+                        <animate attributeName="opacity" repeatCount="indefinite" dur="1s" values="1;0" keyTimes="0;1" keySplines="0.2 0 0.8 1" calcMode="spline" begin="-0.5s"></animate>
+                    </circle>
+                    <circle cx="50" cy="50" r="27.3557" fill="none" stroke="#76cbc1" stroke-width="2">
+                        <animate attributeName="r" repeatCount="indefinite" dur="1s" values="0;40" keyTimes="0;1" keySplines="0 0.2 0.8 1" calcMode="spline"></animate>
+                        <animate attributeName="opacity" repeatCount="indefinite" dur="1s" values="1;0" keyTimes="0;1" keySplines="0.2 0 0.8 1" calcMode="spline"></animate>
+                    </circle>
+                </svg>
+            </div>
+        </div> --}}
 
         <v-app id="app">
             <v-progress-linear
@@ -75,11 +88,11 @@
         <script src="{{ asset('js/app.js') }}"></script>
 
 
-        <script>
+        {{-- <script>
             $( document ).ready(function() {
                 $('.app-wrapper').delay(1500).fadeOut();
             });
-        </script>
+        </script> --}}
 
     </body>
 </html>
