@@ -3,8 +3,8 @@
         <v-row pa-0 class="hero-container">
             <v-col class="hero-col">
                 <v-img
-                src="/images/home_house.jpg"
                 srcset="/images/home_house_small.jpg 600w, /images/home_house.jpg 800w"
+                src="/images/home_house.jpg"
                 height="500"
                 sizes="(max-width: 600px) 600px,
             (max-width: 800px) 600px"
