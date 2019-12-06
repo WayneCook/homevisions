@@ -6,6 +6,8 @@
                 src="/images/home_house.jpg"
                 srcset="/images/home_house_small.jpg 600w, /images/home_house.jpg 800w"
                 height="500"
+                sizes="(max-width: 600px) 600px,
+            (max-width: 800px) 600px"
                 >
                 </v-img>
             </v-col>
