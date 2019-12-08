@@ -29,7 +29,6 @@
             src="/images/handshake_small.jpg"
             lazy-src="/images/handshake_small.jpg"
             class="services-bg d-flex d-sm-none"
-            height="400"
             >
             </v-img>
 

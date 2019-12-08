@@ -1,30 +1,30 @@
 <template>
-
     <div>
+        <div class="text-center">
 
-            <div class="text-center">
-
-                <v-dialog
-                v-model="loadingDialog"
-                hide-overlay
-                persistent
-                width="250"
+            <v-dialog
+            v-model="loadingDialog"
+            hide-overlay
+            persistent
+            width="250"
+            tile
+            >
+                <v-card
+                    color="customDarkBlue"
+                    dark
+                    tile
                 >
-                    <v-card
-                        color="primary"
-                        dark
-                    >
-                        <v-card-text>
-                            Sending Message
-                            <v-progress-linear
-                                indeterminate
-                                color="white"
-                                class="mb-0"
-                            ></v-progress-linear>
-                        </v-card-text>
-                    </v-card>
-                </v-dialog>
-            </div>
+                    <v-card-text>
+                        Sending Message
+                        <v-progress-linear
+                            indeterminate
+                            color="customBlue"
+                            class="mb-0"
+                        ></v-progress-linear>
+                    </v-card-text>
+                </v-card>
+            </v-dialog>
+        </div>
 
             <v-card
             class="mx-auto contact-card"
@@ -33,14 +33,9 @@
             tile
             >
             <v-card-title class="text-center">
-                <h1 class="title-text">
-                Contact us
-
-                </h1>
+                <h1 class="title-text">Contact us</h1>
             </v-card-title>
-
             <v-form ref="form" v-model="valid">
-
                 <v-container>
                 <v-row>
                     <v-col
@@ -49,7 +44,7 @@
                     <v-text-field
                         v-model="form.name"
                         label="Name"
-                        color="#50789f"
+                        color="customBlue"
                         :error-messages="errors.name"
                     ></v-text-field>
                     </v-col>
@@ -60,7 +55,7 @@
                     <v-text-field
                         v-model="form.email"
                         label="E-mail"
-                        color="#50789f"
+                        color="customBlue"
                         :error-messages="errors.email"
                     ></v-text-field>
                     </v-col>
@@ -71,13 +66,11 @@
                     <v-text-field
                         v-model="form.phone"
                         label="Phone"
-                        color="#50789f"
+                        color="customBlue"
                         :error-messages="errors.phone"
                     ></v-text-field>
                     </v-col>
-
                 </v-row>
-
                     <v-row>
                         <v-col
                         cols="12">
@@ -88,27 +81,24 @@
                             value=""
                             auto-grow
                             clearable
-                            color="#50789f"
+                            color="customBlue"
                             :error-messages="errors.message"
                             ></v-textarea>
                         </v-col>
                     </v-row>
                 </v-container>
             </v-form>
-
-            <v-card-actions class="d-flex justify-space-between">
+            <div class="d-sm-flex justify-space-between">
 
                 <div>
-                    <v-btn @click="closeDialog(), clearErrors()" tile class="ma-0 contact-btn" large text light color="#6e7881">Close</v-btn>
+                    <v-btn @click="sendMessage()" :block="$vuetify.breakpoint.xsOnly" tile class=" ma-0 contact-btn" large color="customBlue" dark>Send Message</v-btn>
                 </div>
                 <div>
-                    <v-btn @click="sendMessage()" tile class=" ma-0 contact-btn" large color="customBlue" dark>Send</v-btn>
+                    <v-btn @click="closeDialog(), clearErrors()" :block="$vuetify.breakpoint.xsOnly" tile class="ma-0 contact-btn" large text light color="#6e7881">Cancel</v-btn>
                 </div>
-            </v-card-actions>
+            </div>
         </v-card>
-
     </div>
-
 </template>
 
 <script>
@@ -211,7 +201,7 @@ export default {
 .title-text {
     margin: auto;
     margin-top: 18px;
-    font-size: 26px;
+    font-size: 24px;
 }
 
 

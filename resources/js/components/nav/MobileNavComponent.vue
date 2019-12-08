@@ -45,7 +45,7 @@
         >
 
         <v-list class="link-list">
-            <v-list-item-group>
+            <v-list-item-group color="customBlue">
 
                 <v-list-item
                 v-for="(link, i) in links"
@@ -54,7 +54,7 @@
                 router v-bind:to="link.href"
                 >
 
-                    <v-icon large class="mr-4 align-self-center" color="#50789f">{{ link.icon }}</v-icon>
+                    <v-icon large class="mr-4 align-self-center" color="customDarkBlue">{{ link.icon }}</v-icon>
 
                     <v-list-item-title class="mobile-nav-links" v-text="link.text"></v-list-item-title>
                 </v-list-item>
@@ -146,7 +146,7 @@ export default {
 
     .mobile-nav-links {
 
-        color: #50789f;
+        color: #244f7c;
         font-weight: 500;
     }
 

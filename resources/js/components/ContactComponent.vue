@@ -1,46 +1,40 @@
 <template>
-
     <div>
-
-            <div class="text-center">
-
-                <v-dialog
-                v-model="loadingDialog"
-                hide-overlay
-                persistent
-                width="300"
+        <div class="text-center">
+            <v-dialog
+            v-model="loadingDialog"
+            hide-overlay
+            persistent
+            width="300"
+            >
+                <v-card
+                color="customDarkBlue"
+                dark
                 >
-                    <v-card
-                        color="primary"
-                        dark
-                    >
-                        <v-card-text>
-                            Sending Message
-                            <v-progress-linear
-                                indeterminate
-                                color="white"
-                                class="mb-0"
-                            ></v-progress-linear>
-                        </v-card-text>
-                    </v-card>
-                </v-dialog>
-            </div>
+                    <v-card-text>
+                        Sending Message
+                        <v-progress-linear
+                            indeterminate
+                            color="customBlue"
+                            class="mb-0"
+                        ></v-progress-linear>
+                    </v-card-text>
+                </v-card>
+            </v-dialog>
+        </div>
 
-            <v-col class="pa-4">
-
+        <v-col class="pa-4">
             <v-card
             class="mx-auto contact-card"
             :elevation="13"
             max-width="550"
             tile
             >
-
             <div class="icon-container email-icon">
                 <v-img src="/images/icons/email.png" lazy-src="/images/icons/email.png"></v-img>
             </div>
 
             <v-form v-model="valid">
-
                 <v-container>
                 <v-row>
                     <v-col
@@ -49,7 +43,7 @@
                     <v-text-field
                         v-model="form.name"
                         label="Name"
-                        color="#50789f"
+                        color="customBlue"
                         :error-messages="errors.name"
                     ></v-text-field>
                     </v-col>
@@ -60,7 +54,7 @@
                     <v-text-field
                         v-model="form.email"
                         label="E-mail"
-                        color="#50789f"
+                        color="customBlue"
                         :error-messages="errors.email"
                     ></v-text-field>
                     </v-col>
@@ -71,7 +65,7 @@
                     <v-text-field
                         v-model="form.phone"
                         label="Phone"
-                        color="#50789f"
+                        color="customBlue"
                         :error-messages="errors.phone"
                     ></v-text-field>
                     </v-col>
@@ -88,25 +82,19 @@
                             value=""
                             auto-grow
                             clearable
-                            color="#50789f"
+                            color="customBlue"
                             :error-messages="errors.message"
                             ></v-textarea>
                         </v-col>
                     </v-row>
                 </v-container>
-            </v-form>
-
-            <v-card-actions class="d-flex justify-end">
+                </v-form>
                 <div>
-                    <v-btn @click="sendMessage()" tile class=" ma-0 contact-btn" large color="customBlue" dark>Send message</v-btn>
+                    <v-btn @click="sendMessage()" :block="$vuetify.breakpoint.xsOnly" tile class="ma-0 contact-btn" large color="customBlue" dark>Send message</v-btn>
                 </div>
-            </v-card-actions>
-        </v-card>
-
-         </v-col>
-
+            </v-card>
+        </v-col>
     </div>
-
 </template>
 
 <script>

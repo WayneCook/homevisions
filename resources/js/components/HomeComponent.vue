@@ -13,7 +13,7 @@
                 <v-img
                 src="/images/home_house_small.jpg"
                 lazy-src="/images/home_house_small.jpg"
-                height="500"
+
                 class="d-flex d-sm-none"
                 >
                 </v-img>
@@ -82,7 +82,6 @@
                 <v-img
                 src="/images/contact_mountians_small.jpg"
                 lazy-src="/images/contact_mountians_small.jpg"
-                min-height="680"
                 class="d-flex d-sm-none"
                 >
                 <v-row class="mb-8">
@@ -106,14 +105,12 @@
 import ContactComponent from './ContactComponent'
 import MissionComponent from './MissionComponent'
 import ServicesComponent from './ServicesComponent'
-import DialogContactComponent from './DialogContactComponent'
 
 export default {
     components: {
         ContactComponent,
         MissionComponent,
-        ServicesComponent,
-        DialogContactComponent
+        ServicesComponent
     },
     computed: {
         getData() {
