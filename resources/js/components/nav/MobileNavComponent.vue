@@ -45,7 +45,7 @@
         >
 
         <v-list class="link-list">
-            <v-list-item-group color="customBlue">
+            <v-list-item-group color="#9ccee1">
 
                 <v-list-item
                 v-for="(link, i) in links"

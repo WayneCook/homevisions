@@ -30,7 +30,7 @@ a.nav-links {
 }
 
 .logo-visions {
-    color: #40cae2;
+    color: $secondary;
     text-transform: uppercase;
     font-weight: 500;
     display: inline-block;
@@ -73,8 +73,8 @@ p.logo-pm {
 }
 
 .logo-bottom {
-    fill: #82deec;
-    stroke: #82deec;
+    fill: $secondary;
+    stroke: $secondary;
     stroke-width:10;
     stroke-miterlimit:10;
 }

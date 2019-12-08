@@ -47,7 +47,7 @@ const app = new Vue({
             themes: {
                 light: {
                     customBlue: '#00bcd4',
-                    customDarkBlue: "#28598a"
+                    customDarkBlue: "#2b6490"
                 }
             }
         }

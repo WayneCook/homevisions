@@ -1,5 +1,4 @@
 <template>
-
     <v-container class="pa-0 custom-container">
         <v-row class="mission-row">
             <v-col class="pa-4 mission-left-col col-12 col-md-6">
@@ -13,18 +12,12 @@
                         <span class="title-underline"></span>
                     </h1>
                     <p>{{ getData[1].text }}</p>
-
-
                     <div>
                         <v-btn @click="$store.dispatch('app/setContactDialog', true)" :block="$vuetify.breakpoint.xsOnly" tile class="ma-0 mt-8 contact-btn" large color="customBlue" dark>Contact us</v-btn>
                     </div>
-
                 </v-card>
-
             </v-col>
-
             <v-col class="pt-8 col-12 col-md-6">
-
             <v-img
             src="/images/handshake_small.jpg"
             lazy-src="/images/handshake_small.jpg"
@@ -40,14 +33,9 @@
             height="400"
             >
             </v-img>
-
-
             </v-col>
-
         </v-row>
-
-        </v-container>
-
+    </v-container>
 </template>
 
 <script>
