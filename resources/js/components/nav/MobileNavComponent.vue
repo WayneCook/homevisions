@@ -6,7 +6,7 @@
         class="hamburger-container hamburger hamburger--3dy"
         >
 
-        <v-icon large>{{ hamburger }}</v-icon>
+        <v-icon large color="customDarkBlue">{{ hamburger }}</v-icon>
         </div>
 
         <v-container class="mobile-nav custom-container d-flex justify-center align-center">
@@ -54,7 +54,7 @@
                 router v-bind:to="link.href"
                 >
 
-                    <v-icon class="mr-4 align-self-center" color="#50789f">{{ link.icon }}</v-icon>
+                    <v-icon large class="mr-4 align-self-center" color="#50789f">{{ link.icon }}</v-icon>
 
                     <v-list-item-title class="mobile-nav-links" v-text="link.text"></v-list-item-title>
                 </v-list-item>

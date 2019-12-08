@@ -102,7 +102,7 @@
                     <v-btn @click="closeDialog(), clearErrors()" tile class="ma-0 contact-btn" large text light color="#6e7881">Close</v-btn>
                 </div>
                 <div>
-                    <v-btn @click="sendMessage()" tile class=" ma-0 contact-btn" large color="rgb(47, 193, 176)" dark>Send</v-btn>
+                    <v-btn @click="sendMessage()" tile class=" ma-0 contact-btn" large color="customBlue" dark>Send</v-btn>
                 </div>
             </v-card-actions>
         </v-card>
@@ -211,6 +211,7 @@ export default {
 .title-text {
     margin: auto;
     margin-top: 18px;
+    font-size: 26px;
 }
 
 

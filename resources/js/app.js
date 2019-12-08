@@ -17,9 +17,6 @@ import HomeComponent from './components/HomeComponent'
 import AboutComponent from './components/AboutComponent'
 import NavComponent from './components/nav/NavComponent'
 import MobileNavComponent from './components/nav/MobileNavComponent'
-import MissionComponent from './components/MissionComponent'
-import ServicesComponent from './components/ServicesComponent'
-import ContactComponent from './components/ContactComponent'
 import LoginComponent from './components/LoginComponent'
 
 Vue.use(VueRouter)
@@ -27,6 +24,7 @@ Vue.use(Vuetify)
 Vue.use(Vuex)
 Vue.use(VueSweetalert2);
 Vue.component('slick', Slick)
+
 
 
 
@@ -44,7 +42,16 @@ const router = new VueRouter({
 //Root vue instance
 const app = new Vue({
     el: '#app',
-    vuetify: new Vuetify(),
+    vuetify: new Vuetify({
+        theme: {
+            themes: {
+                light: {
+                    customBlue: '#00bcd4',
+                    customDarkBlue: "#28598a"
+                }
+            }
+        }
+    }),
     router,
     store,
     // store,
@@ -56,10 +63,6 @@ const app = new Vue({
         HomeComponent,
         NavComponent,
         MobileNavComponent,
-        MissionComponent,
-        ServicesComponent,
-        ContactComponent,
-        Slick,
         LoginComponent
     },
     mounted () {

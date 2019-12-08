@@ -17,13 +17,12 @@ const mix = require('laravel-mix');
  */
 
 
-    mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
+    mix.js('resources/js/app.js', 'public/js').sass('resources/sass/app.scss', 'public/css');
 
 
-   mix.js('resources/js/admin.js', 'public/js');
+    mix.js('resources/js/admin.js', 'public/js');
 
-   mix.browserSync({
+    mix.browserSync({
     injectChanges: false,
     proxy: 'http://127.0.0.1:8000/'
 });

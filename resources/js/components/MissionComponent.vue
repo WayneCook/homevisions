@@ -15,9 +15,10 @@
                     <p>{{ getData[1].text }}</p>
 
 
-                    <div class="my-2">
-                        <v-btn @click="$store.dispatch('app/setContactDialog', true)" tile class="ma-0 mt-4 contact-btn" large color="hsla(173, 61%, 47%, 1)" dark>Contact us</v-btn>
+                    <div>
+                        <v-btn @click="$store.dispatch('app/setContactDialog', true)" :block="$vuetify.breakpoint.xsOnly" tile class="ma-0 mt-8 contact-btn" large color="customBlue" dark>Contact us</v-btn>
                     </div>
+
                 </v-card>
 
             </v-col>

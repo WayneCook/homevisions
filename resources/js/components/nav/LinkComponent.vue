@@ -50,7 +50,7 @@ export default {
         height: 4px;
         width: 100%;
         display: block;
-        background-color: #76cbc1;
+        background-color: #00bcd4;
         border-radius: 4px;
         position: relative;
         bottom: -7px;
@@ -62,7 +62,7 @@ export default {
         height: 4px;
         width: 100%;
         display: block;
-        background-color: #76cbc1;
+        background-color: #00bcd4;
         border-radius: 4px;
         position: relative;
         bottom: -7px;

@@ -98,7 +98,7 @@
 
             <v-card-actions class="d-flex justify-end">
                 <div>
-                    <v-btn @click="sendMessage()" tile class=" ma-0 contact-btn" large color="rgb(47, 193, 176)" dark>Send message</v-btn>
+                    <v-btn @click="sendMessage()" tile class=" ma-0 contact-btn" large color="customBlue" dark>Send message</v-btn>
                 </div>
             </v-card-actions>
         </v-card>

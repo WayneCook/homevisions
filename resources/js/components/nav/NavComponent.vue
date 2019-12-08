@@ -26,7 +26,7 @@
             <ul class="flex-grow-1 d-flex align-center justify-end">
                 <link-component :link="link" :key="i" v-for=" (link, i) in list"></link-component>
             </ul>
-                    <v-btn @click="$store.dispatch('app/setContactDialog', true)" class="ml-4" tile dark color="hsla(173, 61%, 47%, 1)">contact us</v-btn>
+                    <v-btn @click="$store.dispatch('app/setContactDialog', true)" class="ml-4" tile dark color="customBlue">contact us</v-btn>
         </v-container>
 
         <v-dialog

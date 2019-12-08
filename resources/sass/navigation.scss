@@ -73,8 +73,8 @@ p.logo-pm {
 }
 
 .logo-bottom {
-    fill: $secondary;
-    stroke: $secondary;
+    fill: #64d6e8;
+    stroke: #64d6e8;
     stroke-width:10;
     stroke-miterlimit:10;
 }
@@ -101,6 +101,29 @@ p.logo-pm {
     letter-spacing: .5px;
     color: white;
 }
+
+// ul li a.active span {
+//     height: 4px;
+//     width: 100%;
+//     display: block;
+//     background-color: #76cbc1;
+//     border-radius: 4px;
+//     position: relative;
+//     bottom: -7px;
+//     left: -100px;
+//     animation: active .25s ease-in-out forwards;
+// }
+
+// ul li a span {
+//     height: 4px;
+//     width: 100%;
+//     display: block;
+//     background-color: #76cbc1;
+//     border-radius: 4px;
+//     position: relative;
+//     bottom: -7px;
+//     animation: inactive .25s ease-in-out forwards;
+// }
 
 
 

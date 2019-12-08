@@ -130,9 +130,11 @@ export default {
 
 @media only screen and (max-width: 360px) {
 
-  .bottom-banner h1 {
-      font-size: 38px;
-      font-family: "Red Hat Display", sans-serif;
+  .bottom-banner h1, .bottom-banner span  {
+    font-size: 38px;
+    margin: 8px;
+    font-weight: 900;
+    font-family: "Red Hat Display", sans-serif;
   }
 
 }
