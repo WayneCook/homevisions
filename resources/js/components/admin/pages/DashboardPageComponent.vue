@@ -9,7 +9,7 @@
     </v-row>
 
     <v-row>
-        <v-col class="pa-2">
+        <v-col class="pa-2 col-12 col-sm-4">
             <v-card class="d-flex justify-space-between align-center elevation-1">
                 <div class="mx-auto">
                 <v-card-title class="pb-0">
@@ -33,7 +33,7 @@
             </v-card>
         </v-col>
 
-        <v-col class="pa-2">
+        <v-col class="pa-2 col-12 col-sm-4">
              <v-card class="d-flex justify-space-between align-center elevation-1">
                 <div class="mx-auto">
                 <v-card-title class="pb-0">
@@ -57,7 +57,7 @@
             </v-card>
         </v-col>
 
-        <v-col class="pa-2">
+        <v-col class="pa-2 col-12 col-sm-4">
              <v-card class="d-flex justify-space-between align-center elevation-1">
                 <div class="mx-auto">
                 <v-card-title class="pb-0">

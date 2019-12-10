@@ -131,7 +131,7 @@ export default {
 
 .echarts {
     width: 100%;
-    min-width: 400px;
+    /* min-width: 400px; */
 }
 
 .chart-container {

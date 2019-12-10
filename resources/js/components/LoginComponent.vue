@@ -23,7 +23,7 @@
                     <v-img src="/images/icons/lock.png" lazy-src="/images/icons/lock.png"></v-img>
                 </div>
                     <v-form v-model="valid">
-                        <v-container>
+                        <v-container class="my-8">
                         <v-row>
                             <v-col
                             cols="12"
