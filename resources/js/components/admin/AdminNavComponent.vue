@@ -99,12 +99,12 @@
         dark
         >
             <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-            <v-toolbar-title>Home Visions</v-toolbar-title>
+            <v-toolbar-title class="d-none d-sm-flex ">Home Visions</v-toolbar-title>
             <v-spacer></v-spacer>
 
-            <v-icon class="mr-2">mdi-account-circle</v-icon>
+            <v-icon class="d-none d-sm-flex mr-2">mdi-account-circle</v-icon>
 
-            <span class="mr-4">
+            <span class="mr-4 d-none d-sm-flex">
                 {{ user.name }}
             </span>
 
@@ -124,7 +124,7 @@
         props: ['user'],
         data(){
             return {
-                drawer: true,
+                drawer: false,
                 snackbar: false
             }
         },
