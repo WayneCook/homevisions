@@ -215,4 +215,8 @@ div.slick-slide {
     padding: 20px;
 }
 
+.slick-dots li.slick-active button:before {
+    color:#00bcd4 !important;
+}
+
 </style>

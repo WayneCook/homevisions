@@ -11,7 +11,7 @@
 
         <div class="app-wrapper">
             <div class="loader-container">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="70px" height="70px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
                     <defs>
                       <clipPath id="ldio-m757uprblfp-cp" x="0" y="0" width="100" height="100">
                         <rect x="77.956" y="0" width="100" height="100">

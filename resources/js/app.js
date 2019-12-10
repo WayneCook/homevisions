@@ -1,16 +1,14 @@
 import "@babel/polyfill";
 require('./bootstrap')
 
-
 //Packages
 import Vue from 'vue'
-import Vuetify from 'vuetify'
+import Vuetify from 'vuetify/dist/vuetify.min'
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 import Slick from 'vue-slick'
 import VueSweetalert2 from 'vue-sweetalert2'
 import store from './store'
-
 
 //Components
 import HomeComponent from './components/HomeComponent'
@@ -25,9 +23,6 @@ Vue.use(Vuex)
 Vue.use(VueSweetalert2);
 Vue.component('slick', Slick)
 
-
-
-
 const router = new VueRouter({
     mode: 'history',
     linkExactActiveClass: "active",
@@ -37,7 +32,6 @@ const router = new VueRouter({
         { path: "/admin-login", component: LoginComponent, name: "adminlogin" }
       ]
   })
-
 
 //Root vue instance
 const app = new Vue({
@@ -54,7 +48,6 @@ const app = new Vue({
     }),
     router,
     store,
-    // store,
     data: () => ({
         drawer: null,
         loading: false

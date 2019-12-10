@@ -91,7 +91,7 @@
             <div class="d-sm-flex justify-space-between">
 
                 <div>
-                    <v-btn @click="sendMessage()" :block="$vuetify.breakpoint.xsOnly" tile class=" ma-0 contact-btn" large color="customBlue" dark>Send Message</v-btn>
+                    <v-btn @click="sendMessage()" :block="$vuetify.breakpoint.xsOnly" tile class="mb-4 mb-sm-0 ma-0 contact-btn" large color="customBlue" dark>Send Message</v-btn>
                 </div>
                 <div>
                     <v-btn @click="closeDialog(), clearErrors()" :block="$vuetify.breakpoint.xsOnly" tile class="ma-0 contact-btn" large text light color="#6e7881">Cancel</v-btn>
@@ -200,7 +200,7 @@ export default {
 
 .title-text {
     margin: auto;
-    margin-top: 18px;
+    margin-top: 14px;
     font-size: 24px;
 }
 
