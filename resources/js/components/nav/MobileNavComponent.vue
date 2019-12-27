@@ -11,7 +11,7 @@
 
         <v-container class="mobile-nav custom-container d-flex justify-center align-center">
 
-            <div class="logo-wrapper pa-2">
+            <div class="logo-wrapper pa-2" @click="redirectToHome">
 
             <div class="logo-icon mx-auto">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -80,8 +80,9 @@ export default {
         LinkComponent
     },
     methods: {
-        activeMenu() {
+        redirectToHome() {
 
+            this.$router.push({ name: 'home' }).catch(err => {})
         }
     },
     computed: {

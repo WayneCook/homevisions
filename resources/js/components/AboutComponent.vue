@@ -13,24 +13,23 @@
         <v-container class="custom-container mt-10">
             <v-row>
                 <v-col class="about-col-left">
+                    <div data-aos-delay="800" data-aos="fade-up" class="about-enter-animation">
                     <v-card
                     tile
                     elevation="8"
                     class="mx-auto about-us-card"
                     max-width="700"
                     >
-                        <h1 class="title-text">{{ getData[4].title }}
+                        <h1 data-aos-delay="900" data-aos="fade-up" class="title-text">{{ getData[4].title }}
                             <span class="title-underline"></span>
                         </h1>
 
-                        <p class="para">Based out of the San Gabriel Valley and 15 years in California Property Management business, we continue thrive in the dynamic fast paced housing market.
-                            Our expertise and knowledge for any changes, updates in our management business is consistently achieved.
-                            At Home Visions Property Management we understand your hard work investments. We dedicate ourselves in providing highest quality housing.
-                        </p>
+                        <p data-aos-delay="1000" data-aos="fade-up" class="para">{{ getData[4].text  }}</p>
                         <div>
-                            <v-btn @click="$store.dispatch('app/setContactDialog', true)" :block="$vuetify.breakpoint.xsOnly" tile class="ma-0 mt-8 contact-btn" large color="customBlue" dark>Contact us</v-btn>
+                            <v-btn data-aos-delay="1100" data-aos="fade-up" @click="$store.dispatch('app/setContactDialog', true)" :block="$vuetify.breakpoint.xsOnly" tile class="ma-0 mt-8 contact-btn" large color="customBlue" dark>Contact us</v-btn>
                         </div>
                     </v-card>
+                    </div>
                 </v-col>
             </v-row>
         </v-container>
@@ -42,27 +41,28 @@
     gradient="to top, rgba(247, 247, 247, 0.19), rgb(247, 247, 247)"
     class="d-flex d-sm-none"
     >
-        <v-container class="custom-container mt-10">
+        <v-container class="custom-container">
             <v-row>
                 <v-col class="about-col-left">
+
+                    <div data-aos-delay="800" data-aos="fade-up">
                     <v-card
                     tile
                     elevation="8"
                     class="mx-auto about-us-card"
                     max-width="700"
                     >
-                        <h1 class="title-text">{{ getData[4].title }}
+                        <h1 data-aos-delay="900" data-aos="fade-up" class="title-text">{{ getData[4].title }}
                             <span class="title-underline"></span>
                         </h1>
 
-                        <p class="para">Based out of the San Gabriel Valley and 15 years in California Property Management business, we continue thrive in the dynamic fast paced housing market.
-                            Our expertise and knowledge for any changes, updates in our management business is consistently achieved.
-                            At Home Visions Property Management we understand your hard work investments. We dedicate ourselves in providing highest quality housing.
-                        </p>
+                        <p data-aos-delay="1000" data-aos="fade-up" class="para">{{ getData[4].text  }}</p>
                         <div>
-                            <v-btn @click="$store.dispatch('app/setContactDialog', true)" :block="$vuetify.breakpoint.xsOnly" tile class="ma-0 mt-8 contact-btn" large color="customBlue" dark>Contact us</v-btn>
+                            <v-btn data-aos-delay="1100" data-aos="fade-up" @click="$store.dispatch('app/setContactDialog', true)" :block="$vuetify.breakpoint.xsOnly" tile class="ma-0 mt-8 contact-btn" large color="customBlue" dark>Contact us</v-btn>
                         </div>
                     </v-card>
+                    </div>
+
                 </v-col>
             </v-row>
         </v-container>

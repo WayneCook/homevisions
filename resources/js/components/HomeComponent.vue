@@ -6,16 +6,61 @@
                 src="/images/home_house.jpg"
                 lazy-src="/images/home_house.jpg"
                 height="500"
-                class="d-none d-sm-flex"
+                class="d-none d-sm-flex justify-content-start align-center"
+                gradient="to right, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.13)"
                 >
+
+                <v-container fluid class="custom-container">
+                    <v-row>
+                        <v-col class="col">
+                            <div class="animated-card">
+
+                            <v-card
+                            max-width="558"
+                            tile
+                            class="pa-6 banner-card animated fadeInUp elevation-8"
+                            >
+                                <h1>Property Management</h1>
+                                <h1>in San Gabriel Valley</h1>
+                            </v-card>
+                                <div class="banner-card-bottom py-4 animated fadeInLeft elevation-8">
+                                    <p class="para mx-8 my-0 pa-0">Partner with a specialist, <span>we do the rest.</span></p>
+                                </div>
+                            </div>
+                        </v-col>
+
+                    </v-row>
+                </v-container>
+
                 </v-img>
 
                 <v-img
                 src="/images/home_house_small.jpg"
                 lazy-src="/images/home_house_small.jpg"
-
-                class="d-flex d-sm-none"
+                class="d-flex d-sm-none justify-center align-center"
+                gradient="to right, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.13)"
                 >
+                <v-container fluid class="custom-container my-6">
+                    <v-row>
+                        <v-col class="col">
+                            <div class="animated-card">
+
+                            <v-card
+                            max-width="558"
+                            tile
+                            class="pa-6 banner-card banner-card-small animated fadeInUp elevation-8"
+                            >
+                                <h1>Property Management</h1>
+                                <h1>in San Gabriel Valley</h1>
+                            </v-card>
+                                <div class="banner-card-bottom banner-card-bottom-small py-4 animated fadeInLeft elevation-8">
+                                    <p class="para mx-8 my-0 pa-0">Partner with a specialist, <span>we do the rest.</span></p>
+                                </div>
+                            </div>
+                        </v-col>
+
+                    </v-row>
+                </v-container>
                 </v-img>
 
             </v-col>
@@ -39,20 +84,20 @@
             <v-row>
                 <v-col cols="12" md="6">
                     <div class="mb-4 info-box">
-                        <h1 class="title-text">{{ getData[2].title }}
-                            <span class="title-underline"></span>
+                        <h1 data-aos="fade-up" class="title-text">{{ getData[2].title }}
+                            <span data-aos="fade-up" data-aos-delay="100" class="title-underline"></span>
                         </h1>
 
-                        <p class="para">{{ getData[2].text }}</p>
+                        <p data-aos="fade-up" data-aos-delay="200" class="para">{{ getData[2].text }}</p>
                     </div>
                 </v-col>
 
                 <v-col cols="12" md="6">
                     <div class="info-box">
-                        <h1 class="title-text">{{ getData[3].title }}
-                            <span class="title-underline"></span>
+                        <h1 data-aos="fade-up" class="title-text">{{ getData[3].title }}
+                            <span data-aos="fade-up" data-aos-delay="100" class="title-underline"></span>
                         </h1>
-                        <p class="para">{{ getData[3].text }}</p>
+                        <p data-aos="fade-up" data-aos-delay="200" class="para">{{ getData[3].text }}</p>
                     </div>
                 </v-col>
             </v-row>
@@ -69,12 +114,12 @@
                 >
                 <v-row class="mb-8">
                     <v-col class="text-center">
-                        <h1 class="title-text ma-8">Leave us a message</h1>
+                        <h1 data-aos="fade-up" class="title-text ma-8">Leave us a message</h1>
                     </v-col>
                 </v-row>
                 <v-row>
                     <v-col>
-                        <contact-component></contact-component>
+                        <contact-component data-aos="fade-up"></contact-component>
                     </v-col>
                 </v-row>
                 </v-img>
@@ -86,12 +131,12 @@
                 >
                 <v-row class="mb-8">
                     <v-col class="text-center">
-                        <h1 class="title-text ma-8">Leave us a message</h1>
+                        <h1 data-aos="fade-up" class="title-text ma-8">Leave us a message</h1>
                     </v-col>
                 </v-row>
                 <v-row>
                     <v-col>
-                        <contact-component></contact-component>
+                        <contact-component data-aos="fade-up"></contact-component>
                     </v-col>
                 </v-row>
                 </v-img>
@@ -132,6 +177,14 @@ export default {
     margin: 8px;
     font-weight: 900;
     font-family: "Red Hat Display", sans-serif;
+  }
+
+  .banner-card-small h1 {
+      font-size: 34px;
+  }
+
+  .banner-card-bottom-small p {
+      font-size: 18px;
   }
 
 }

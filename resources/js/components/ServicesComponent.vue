@@ -1,7 +1,7 @@
 <template>
     <v-container fluid class="pa-0">
         <v-row class="d-flex justify-center mb-4">
-            <h1 class="title-text">OUR SERVICES</h1>
+            <h1 class="title-text" data-aos="fade-up">OUR SERVICES</h1>
         </v-row>
 
 
@@ -14,84 +14,59 @@
             class="d-none d-sm-flex"
             >
             <v-container class="custom-container cards-wrapper pa-0">
-
                 <div>
                     <slick ref="slick" :options="slickOptions">
-                    <div :key="i" v-for="(card, i) in serviceCards">
-                    <v-card
-                    class="service-cards"
-                    max-width="325"
-                    :elevation="13"
-                    tile
-
-                    >
-                    <div class="icon-container ">
-                        <v-img :src="card.icon"></v-img>
-                    </div>
-                    <v-card-text class="custom-card-text">
-                        <ul>
-                            <li class="service-list" :key="i" v-for="(service, i) in card.services">{{ service }}</li>
-                        </ul>
-                    </v-card-text>
-
-                    <v-card-actions>
-                        <!-- <v-btn
-                        text
-                        color="rgb(89, 128, 167)"
-                        >
-                            Learn More
-                        </v-btn> -->
-                    </v-card-actions>
-                    </v-card>
-
-
+                        <div :key="index" v-for="(card, index) in serviceCards">
+                            <v-card
+                            class="service-cards"
+                            max-width="325"
+                            :elevation="13"
+                            tile
+                            data-aos="fade-up"
+                            >
+                                <div class="icon-container ">
+                                    <v-img :src="card.icon"></v-img>
+                                </div>
+                                <v-card-text class="custom-card-text">
+                                    <ul>
+                                        <li data-aos="fade-up" :data-aos-delay="i * 50" class="service-list" :key="i" v-for="(service, i) in card.services">{{ service }}</li>
+                                    </ul>
+                                </v-card-text>
+                            </v-card>
                         </div>
                     </slick>
-                    </div>
-                </v-container>
-            </v-img>
+                </div>
+            </v-container>
+        </v-img>
 
-                        <v-img
+            <v-img
             src="/images/work_desk_small.jpg"
             lazy-src="/images/work_desk_small.jpg"
             gradient="to top, rgba(247, 247, 247, 0.19), rgb(247, 247, 247)"
             max-height=700
             class="d-flex d-sm-none"
             >
-            <v-container class="custom-container cards-wrapper pa-0">
-
-                <div>
-                    <slick ref="slick" :options="slickOptions">
-                    <div :key="i" v-for="(card, i) in serviceCards">
-                    <v-card
-                    class="service-cards"
-                    max-width="325"
-                    :elevation="13"
-                    tile
-
-                    >
-                    <div class="icon-container ">
-                        <v-img :src="card.icon"></v-img>
-                    </div>
-                    <v-card-text class="custom-card-text">
-                        <ul>
-                            <li class="service-list" :key="i" v-for="(service, i) in card.services">{{ service }}</li>
-                        </ul>
-                    </v-card-text>
-
-                    <v-card-actions>
-                        <!-- <v-btn
-                        text
-                        color="rgb(89, 128, 167)"
-                        >
-                            Learn More
-                        </v-btn> -->
-                    </v-card-actions>
-                    </v-card>
-
-
-                        </div>
-                    </slick>
+                <v-container class="custom-container cards-wrapper pa-0">
+                    <div>
+                        <slick ref="slick" :options="slickOptions">
+                            <div :key="i" v-for="(card, i) in serviceCards">
+                                <v-card
+                                class="service-cards"
+                                max-width="325"
+                                :elevation="13"
+                                tile
+                                >
+                                    <div class="icon-container ">
+                                        <v-img :src="card.icon"></v-img>
+                                    </div>
+                                    <v-card-text class="custom-card-text">
+                                        <ul>
+                                            <li data-aos="fade-up" :data-aos-delay="i * 50" class="service-list" :key="i" v-for="(service, i) in card.services">{{ service }}</li>
+                                        </ul>
+                                    </v-card-text>
+                                </v-card>
+                            </div>
+                        </slick>
                     </div>
                 </v-container>
             </v-img>
@@ -101,14 +76,12 @@
 
 <script>
 
-// import Slick from 'vue-slick';
-
-
 export default {
 
       data() {
 
         return {
+            animations: ['fade-up-right', 'fade-up', 'fade-up-left'],
             serviceCards: [
                 {
                     text: 'card',

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <title>HomeVision</title>
+        <title>Homevision</title>
     </head>
     <body>
 
@@ -41,15 +41,15 @@
                 <mobile-nav-component></mobile-nav-component>
                 <nav-component></nav-component>
                 <div class="bottom-nav">
-                    <h4>Managing San Gabriel Valley Properties</h4>
+                    <h4>Welcome to Homevision Management</h4>
                 </div>
-                <transition name="router-anim" mode="out-in" enter-active-class="animated fadeInLeftBig" leave-active-class="animated fadeOutRightBig">
+                <transition id="transition-element" name="router-anim" mode="out-in" enter-active-class="transition-element-enter animated fadeIn" leave-active-class="transition-element-leave animated fadeOut">
                     <router-view></router-view>
                 </transition>
                 <v-container class="custom-container footer-container">
                     <v-row>
                          <v-col class="d-flex justify-center cols-12 col-sm-6 mb-10 mb-0">
-                            <div class="logo-wrapper pa-2">
+                            <div class="logo-wrapper pa-2" data-aos="fade-up">
                                 <div class="logo-icon my-0 mx-auto">
                                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         viewBox="0 0 382 199" style="enable-background:new 0 0 382 199;" xml:space="preserve">
@@ -71,16 +71,16 @@
                         </v-col>
                         <v-col class="d-flex justify-center cols-12 col-sm-6">
                             <div>
-                                <h4 class="title-text footer-title">Sitemap</h4>
+                                <h4 data-aos="fade-up" class="title-text footer-title">Sitemap</h4>
                                 <ul class="footer-list">
                                     <li>
-                                        <a class="para footer-links text-center" href="/">Home</a>
+                                        <a data-aos-delay="50" data-aos="fade-up" class="para footer-links text-center" href="/">Home</a>
                                     </li>
                                     <li>
-                                        <a class="para footer-links text-center" href="/about">About</a>
+                                        <a data-aos-delay="100" data-aos="fade-up" class="para footer-links text-center" href="/about">About</a>
                                     </li>
                                     <li>
-                                        <a class="para footer-links text-center" href="/admin/dashboard">Admin</a>
+                                        <a data-aos-delay="150" data-aos="fade-up" class="para footer-links text-center" href="/admin/dashboard">Admin</a>
                                     </li>
                                 </ul>
                             </div>
@@ -99,9 +99,15 @@
         <script src="{{ asset('js/app.js') }}"></script>
 
         <script>
-            $( document ).ready(function() {
-                $('.app-wrapper').delay(1500).fadeOut();
+           $(window).on('load', function() {
+                $('.app-wrapper').delay(200).fadeOut(1500);
+
+                $('#transition-element').attr('name', 'value');
+
+
             });
+
+
         </script>
 
     </body>

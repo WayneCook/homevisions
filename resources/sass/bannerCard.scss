@@ -1,0 +1,46 @@
+.banner-card {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    font-family: "Red Hat Display", sans-serif;
+    position: relative;
+    animation-duration: 1.4s;
+    animation-delay: 1.3s;
+    // border-top-left-radius: 6px;
+    // border-top-right-radius: 6px;
+}
+
+.banner-card h1 {
+    color: hsla(207, 54%, 37%, 0.9);
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 44px;
+    text-align: center;
+    // text-transform: uppercase;
+}
+
+.banner-card-bottom {
+    animation-duration: 1.4s;
+    animation-delay: 2s;
+    display: block;
+    background-color: #5a646b;
+    // border-bottom-left-radius: 6px;
+    // border-bottom-right-radius: 6px;
+}
+
+.banner-card-bottom p {
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.animated-card {
+    max-width: 558px;
+}
+
+.banner-card-bottom p span {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+

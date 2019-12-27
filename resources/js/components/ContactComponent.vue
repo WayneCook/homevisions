@@ -180,5 +180,17 @@ export default {
     margin-bottom: 100px;
 }
 
+.contact-card:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 100%;
+    height: 100%;
+    background-color: #2b6490;
+    z-index: -1;
+}
+
 
 </style>

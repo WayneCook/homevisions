@@ -19,6 +19,7 @@
 @import './navigation';
 @import './services';
 @import './footer';
+@import './bannerCard';
 
 
 html,body
@@ -90,6 +91,19 @@ html,body
 .v-dialog {
     border-radius: 0px!important;
     margin: 14px;
+}
+
+.transition-element-enter {
+    animation-duration: 1.5s;
+}
+
+.transition-element-leave {
+    animation-duration: .4s;
+}
+
+.about-enter-animation {
+    animation-duration: 1.5s;
+    animation-delay: .5s;
 }
 
 
