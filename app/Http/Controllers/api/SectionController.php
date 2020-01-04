@@ -70,17 +70,6 @@ class SectionController extends Controller
     public function update(Request $request, Section $section)
     {
 
-        // return $request->toArray();
-
-        // return $request;
-        // Validator::make($request->params, [
-        //     'name' => ['bail','required', 'string', 'max:255'],
-        //     'email' => ['bail','required', 'string', 'email', 'max:255'],
-        //     'phone' => ['bail','required', 'string', 'max:255'],
-
-        // ])->validate();
-
-
         $section->fill($request->all())->save();
 
         return $section;

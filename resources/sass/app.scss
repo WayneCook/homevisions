@@ -20,6 +20,7 @@
 @import './services';
 @import './footer';
 @import './bannerCard';
+@import './propertyManagement';
 
 
 html,body
@@ -59,9 +60,10 @@ html,body
     color: $primary;
     text-transform: uppercase;
     font-weight: 800;
-    font-size: 28px;
+    font-size: 26px;
     font-family: 'Red Hat Display', sans-serif;
     display: inline-block;
+    letter-spacing: .5px;
 }
 
 .title-underline {
@@ -70,7 +72,7 @@ html,body
     background-color: $secondary;
     display: block;
     border-radius: 4px;
-    margin: 15px 0px;
+    margin: 19px 0px;
 }
 
 .custom-progress-bar {
@@ -104,6 +106,10 @@ html,body
 .about-enter-animation {
     animation-duration: 1.5s;
     animation-delay: .5s;
+}
+
+.container.footer-wrapper {
+    // background-color: hsla(200, 7%, 94%, 1);
 }
 
 

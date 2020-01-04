@@ -54,7 +54,7 @@
                 router v-bind:to="link.href"
                 >
 
-                    <v-icon large class="mr-4 align-self-center" color="customDarkBlue">{{ link.icon }}</v-icon>
+                    <v-icon class="mr-4 align-self-center" color="customDarkBlue">{{ link.icon }}</v-icon>
 
                     <v-list-item-title class="mobile-nav-links" v-text="link.text"></v-list-item-title>
                 </v-list-item>
@@ -73,7 +73,11 @@ export default {
     data() {
         return {
             drawer: false,
-            links: [{text: "Home", href: "/", icon: "mdi-home-circle-outline"}, {text:"About", href: "/about", icon: "mdi-information-outline"}]
+            links: [
+                {text: "Home", href: "/", icon: "mdi-home-outline"},
+                {text:"About", href: "/about", icon: "mdi-information-variant"},
+                {text:"Property Management", href: "/property-management", icon: "mdi-shield-home-outline"}
+            ]
         }
     },
     components: {

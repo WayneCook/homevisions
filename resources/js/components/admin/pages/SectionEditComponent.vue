@@ -3,7 +3,8 @@
         <v-col class="pa-2">
             <v-card
             class="pa-8 elevation-1"
-            width="auto">
+            width="auto"
+            >
 
                 <v-card-title class="pa-0 mb-4">{{ section.description }}</v-card-title>
 
@@ -16,7 +17,7 @@
 
                     <v-textarea
                         v-model="section.text"
-                        label="Description"
+                        label="Body"
                         auto-grow
                         outlined
                     ></v-textarea>

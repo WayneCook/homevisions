@@ -46,9 +46,11 @@
                 <transition id="transition-element" name="router-anim" mode="out-in" enter-active-class="transition-element-enter animated fadeIn" leave-active-class="transition-element-leave animated fadeOut">
                     <router-view></router-view>
                 </transition>
+
+                <v-container fluid class="footer-wrapper">
                 <v-container class="custom-container footer-container">
                     <v-row>
-                         <v-col class="d-flex justify-center cols-12 col-sm-6 mb-10 mb-0">
+                         <v-col class="d-flex justify-center cols-12 mb-8 mb-0 mx-auto">
                             <div class="logo-wrapper pa-2" data-aos="fade-up">
                                 <div class="logo-icon my-0 mx-auto">
                                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -69,28 +71,40 @@
                                 </div>
                             </div>
                         </v-col>
-                        <v-col class="d-flex justify-center cols-12 col-sm-6">
+                    </v-row>
+
+                    <v-row class="mt-8">
+                        <v-col class="d-flex justify-center cols-12">
                             <div>
-                                <h4 data-aos="fade-up" class="title-text footer-title">Sitemap</h4>
-                                <ul class="footer-list">
-                                    <li>
-                                        <a data-aos-delay="50" data-aos="fade-up" class="para footer-links text-center" href="/">Home</a>
+                                <h4 data-aos="fade-up" data-aos-delay="50" class="mb-1 d-block text-center title-text footer-title">Sitemap</h4>
+                                <ul class="footer-list d-flex justify-center flex-wrap" data-aos-delay="100" data-aos="fade-up">
+                                    <li class="d-inline-block mx-3">
+                                        <a class="para footer-links text-left" href="/">Home</a>
                                     </li>
-                                    <li>
-                                        <a data-aos-delay="100" data-aos="fade-up" class="para footer-links text-center" href="/about">About</a>
+                                    <li class="d-inline-block mx-3">
+                                        <a class="para footer-links text-left" href="/about">About</a>
                                     </li>
-                                    <li>
-                                        <a data-aos-delay="150" data-aos="fade-up" class="para footer-links text-center" href="/admin/dashboard">Admin</a>
+                                    <li class="d-inline-block mx-3">
+                                        <a class="para footer-links text-left" href="/admin/dashboard">Admin</a>
+                                    </li>
+                                    <li class="d-inline-block mx-3">
+                                        <a class="para footer-links text-left" href="/property-management">Property Management</a>
                                     </li>
                                 </ul>
                             </div>
                         </v-col>
                     </v-row>
+
                 </v-container>
+
+            </v-container>
                 <v-container fluid class="footer-bottom">
                     <v-row>
                         <v-col class="d-flex justify-center align-center">
-                            <p class="copyright-text pa-2 ma-0">Copyright &copy; {{ now()->year }} HomeVision</p>
+                            <p class="copyright-text pa-2 ma-0">Copyright &copy; {{ now()->year }} Homevision</p>
+                        </v-col>
+                        <v-col>
+                            <v-img class="mx-auto" width="75" src="/images/fair-housing-logo.png"></v-img>
                         </v-col>
                     </v-row>
                 </v-container>
@@ -104,9 +118,7 @@
 
                 $('#transition-element').attr('name', 'value');
 
-
             });
-
 
         </script>
 

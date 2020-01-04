@@ -11,7 +11,7 @@ import VueSweetalert2 from 'vue-sweetalert2'
 import store from './store'
 
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import 'aos/dist/aos.css';
 
 
 //Components
@@ -20,13 +20,16 @@ import AboutComponent from './components/AboutComponent'
 import NavComponent from './components/nav/NavComponent'
 import MobileNavComponent from './components/nav/MobileNavComponent'
 import LoginComponent from './components/LoginComponent'
+import PropertyManagementComponent from './components/PropertyManagementComponent'
 
 Vue.use(VueRouter)
 Vue.use(Vuetify)
 Vue.use(Vuex)
-Vue.use(VueSweetalert2);
+Vue.use(VueSweetalert2)
 Vue.component('slick', Slick)
-// AOS.init();
+
+Vue.config.devtools = false
+Vue.config.productionTip = false
 
 AOS.init({
     // Global settings:
@@ -44,7 +47,7 @@ AOS.init({
     delay: 0, // values from 0 to 3000, with step 50ms
     duration: 1200, // values from 0 to 3000, with step 50ms
     easing: 'ease', // default easing for AOS animations
-    once: false, // whether animation should happen only once - while scrolling down
+    once: true, // whether animation should happen only once - while scrolling down
     mirror: false, // whether elements should animate out while scrolling past them
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
   });
@@ -57,6 +60,7 @@ const router = new VueRouter({
     routes: [
         { path: "/", component: HomeComponent, name: "home" },
         { path: "/about", component: AboutComponent, name: "about" },
+        { path: "/property-management", component: PropertyManagementComponent, name: "property-management" },
         { path: "/admin-login", component: LoginComponent, name: "adminlogin" }
       ]
   })

@@ -32,6 +32,9 @@
                                         <li data-aos="fade-up" :data-aos-delay="i * 50" class="service-list" :key="i" v-for="(service, i) in card.services">{{ service }}</li>
                                     </ul>
                                 </v-card-text>
+                                    <v-card-actions>
+                                        <v-btn to="/property-management" data-aos="fade-up" text color="customBlue">Learn More</v-btn>
+                                    </v-card-actions>
                             </v-card>
                         </div>
                     </slick>
@@ -64,6 +67,9 @@
                                             <li data-aos="fade-up" :data-aos-delay="i * 50" class="service-list" :key="i" v-for="(service, i) in card.services">{{ service }}</li>
                                         </ul>
                                     </v-card-text>
+                                    <v-card-actions>
+                                        <v-btn to="/property-management" data-aos="fade-up" text color="customBlue">Learn More</v-btn>
+                                    </v-card-actions>
                                 </v-card>
                             </div>
                         </slick>
@@ -79,7 +85,6 @@
 export default {
 
       data() {
-
         return {
             animations: ['fade-up-right', 'fade-up', 'fade-up-left'],
             serviceCards: [
@@ -88,7 +93,6 @@ export default {
                     icon: 'images/icons/document.png',
                     services: [
                         "Prepare rental agreements and addendum's",
-                        "Prepare and serve legal notices",
                         "Move out reports",
                         "Applicant processing, tenant screening and selection"
                     ]
@@ -107,15 +111,11 @@ export default {
                     text: 'card',
                     icon: 'images/icons/law.png',
                     services: [
-                        "prepare and serve legal notices",
+                        "Prepare and serve legal notices",
                         "Prepare rental agreements and addendum's",
                         "Consulting services",
-
                     ]
-
-                },
-
-
+                }
             ],
             slickOptions: {
                 //options can be used from the plugin documentation
@@ -189,7 +189,12 @@ div.slick-slide {
 }
 
 .slick-dots li.slick-active button:before {
-    color:#00bcd4 !important;
+    color:#2b6490 !important;
+}
+
+h1.title-text.aos-init.aos-animate {
+    position: relative;
+    z-index: 99999;
 }
 
 </style>

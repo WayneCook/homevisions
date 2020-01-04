@@ -29,7 +29,7 @@ export default {
 
     ul li {
         display: inline-block;
-        padding: 12px 21px;
+        padding: 12px 16px;
         color: hsla(211, 3%, 52%, 1);
         font-weight: 500;
         font-size: 14px;
@@ -37,7 +37,8 @@ export default {
         letter-spacing: .3px;
         cursor: default;
         text-decoration: none;
-        cursor: default;
+        position: relative;
+
     }
 
     ul li a {
@@ -56,17 +57,18 @@ export default {
         bottom: -7px;
         left: -100px;
         animation: active .25s ease-in-out forwards;
+        margin-top: 3px;
     }
 
     ul li a span {
         height: 4px;
         width: 100%;
         display: block;
-        background-color: #9ccee1;
         border-radius: 4px;
         position: relative;
         bottom: -7px;
         animation: inactive .25s ease-in-out forwards;
+        margin-top: 3px;
     }
 
     ul li:hover a {

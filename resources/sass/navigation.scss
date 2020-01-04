@@ -30,7 +30,8 @@ a.nav-links {
 }
 
 .logo-visions {
-    color: $secondary;
+    // color: $secondary;
+    color: hsla(197, 53%, 67%, 1);
     text-transform: uppercase;
     font-weight: 500;
     display: inline-block;
@@ -48,6 +49,7 @@ p.logo-pm {
     font-weight: 200;
     letter-spacing: .5px;
     text-align: left;
+    margin-bottom: 0px;
 }
 
 .logo-text {

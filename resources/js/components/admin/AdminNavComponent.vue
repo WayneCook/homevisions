@@ -14,12 +14,10 @@
     </v-btn>
 </v-snackbar>
 
-
     <v-navigation-drawer
     v-model="drawer"
     app
     >
-
      <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="title">
@@ -77,15 +75,24 @@
 
 
         <v-list-item to='/admin/pages/about'>
-        <v-list-item-icon>
-          <v-icon>mdi-home</v-icon>
-        </v-list-item-icon>
+            <v-list-item-icon>
+                <v-icon>mdi-home</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+                <v-list-item-title>About</v-list-item-title>
+            </v-list-item-content>
+        </v-list-item>
 
-        <v-list-item-content>
-            <v-list-item-title>About</v-list-item-title>
-        </v-list-item-content>
+        <v-list-item to='/admin/pages/property-management'>
+            <v-list-item-icon>
+                <v-icon>mdi-home</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+                <v-list-item-title>Property Management</v-list-item-title>
+            </v-list-item-content>
+        </v-list-item>
 
-      </v-list-item>
+
       </v-list-group>
 
 

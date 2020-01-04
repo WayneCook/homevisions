@@ -3,7 +3,7 @@
         <v-row>
             <v-col class="pa-2">
                 <v-card color="white" class="pa-4 elevation-1">
-                    <h1 class="headline">Edit About Page Sections</h1>
+                    <h1 class="headline">Edit Property Management Page Sections</h1>
                 </v-card>
             </v-col>
         </v-row>
@@ -22,7 +22,7 @@ export default {
 
     computed: {
         getSections() {
-            return this.$store.getters['admin/getSections'].filter(section => { return section.page === 'about'});
+            return this.$store.getters['admin/getSections'].filter(section => { return section.page === 'property_management'});
         }
     }
 }

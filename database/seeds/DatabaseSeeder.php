@@ -2,8 +2,6 @@
 
 use Illuminate\Database\Seeder;
 
-
-
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -15,9 +13,9 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(SectionTableSeeder::class);
         $this->call(UserTableSeeder::class);
-        $this->call(MessageSeeder::class);
+        // $this->call(MessageSeeder::class);
         $this->call(PagesTableSeeder::class);
 
-        factory(App\Message::class, 50)->create();
+        // factory(App\Message::class, 50)->create();
     }
 }

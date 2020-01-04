@@ -19,14 +19,11 @@
           :must-sort="true"
           show-select
           v-model='selected'
-
         >
 
         <template v-slot:item.message="{ item }">
 
             {{ shortenString(item.message) }}
-
-            <!-- {{ '$'+(item.revenue).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') }} -->
 
         </template>
 

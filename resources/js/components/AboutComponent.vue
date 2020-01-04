@@ -8,16 +8,16 @@
     gradient="to top, rgba(247, 247, 247, 0.19), rgb(247, 247, 247)"
     min-height="700"
     max-height="800"
-    class="d-none d-sm-flex"
+    class="d-none d-sm-flex justify-center align-start"
     >
-        <v-container class="custom-container mt-10">
+        <v-container class="custom-container content-container">
             <v-row>
                 <v-col class="about-col-left">
                     <div data-aos-delay="800" data-aos="fade-up" class="about-enter-animation">
                     <v-card
                     tile
                     elevation="8"
-                    class="mx-auto about-us-card"
+                    class="mx-auto about-us-card pa-sm-12"
                     max-width="700"
                     >
                         <h1 data-aos-delay="900" data-aos="fade-up" class="title-text">{{ getData[4].title }}
@@ -40,8 +40,10 @@
     lazy-src="images/houses_about_small.jpg"
     gradient="to top, rgba(247, 247, 247, 0.19), rgb(247, 247, 247)"
     class="d-flex d-sm-none"
+    max-height="800"
+    position="bottom"
     >
-        <v-container class="custom-container">
+        <v-container class="custom-container mt-12">
             <v-row>
                 <v-col class="about-col-left">
 
@@ -49,7 +51,7 @@
                     <v-card
                     tile
                     elevation="8"
-                    class="mx-auto about-us-card"
+                    class="mx-auto about-us-card pa-8"
                     max-width="700"
                     >
                         <h1 data-aos-delay="900" data-aos="fade-up" class="title-text">{{ getData[4].title }}
@@ -76,11 +78,6 @@
 <script>
 
 export default {
-    data() {
-        return {
-            // loaded: false
-        }
-    },
     computed: {
             getData() {
                 return this.$store.getters['app/getData'].sections.reduce((obj, item) => (obj[item.section_id] = item, obj) ,{})
@@ -93,5 +90,9 @@ export default {
 </script>
 
 <style>
+
+.content-container {
+    margin-top: 100px;
+}
 
 </style>
