@@ -92,19 +92,21 @@ export default {
                     text: 'card',
                     icon: 'images/icons/document.png',
                     services: [
-                        "Prepare rental agreements and addendum's",
-                        "Move out reports",
-                        "Applicant processing, tenant screening and selection"
+                        "Marketing/Leasing/Property showings",
+                        "Application process-Tenant screening + Selection",
+                        "Prepare rental agreements + Addendums",
+                        "Rental collections-Property accounting"
                     ]
                 },
                 {
                     text: 'card',
                     icon: 'images/icons/manage.png',
                     services: [
-                        "Property supervision",
-                        "Rent collections",
+                        "Property Supervision",
+                        "Tentent Services",
                         "Periodic property inspections",
-                        "Organized evictions"
+                        "Resident retention-Lease renewals",
+                        "Schedule unit turns",
                     ]
                 },
                 {
@@ -112,8 +114,9 @@ export default {
                     icon: 'images/icons/law.png',
                     services: [
                         "Prepare and serve legal notices",
-                        "Prepare rental agreements and addendum's",
-                        "Consulting services",
+                        "Owner/Rental consulting services",
+                        "Move out reports",
+                        "Organize unlawful detainers"
                     ]
                 }
             ],
