@@ -48,15 +48,15 @@ class SectionTableSeeder extends Seeder
         $section->page = 'property_management';
         $section->title = 'Services Overview';
         $section->Description = 'Main Services Section';
-        $section->text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+        $section->text = 'Our services range upon customers diverse needs. Whether you need various services or just a one time project we are here to help you. Our expertise in leasing and getting you the right candidates for rentals will have your returns made easy. No stress!';
         $section->section_id = 5;
         $section->save();
 
         $section = new Section();
         $section->page = 'property_management';
-        $section->title = 'san gabriel valley property management';
+        $section->title = 'California Law';
         $section->Description = 'Additional Services Section-1';
-        $section->text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+        $section->text = 'We are experienced in all fields and practices of fair housing laws and regulations. New laws and practices are always our top priority, Homevision superior practice and knowledgement in all management aspects, we reassure you peace of mind.';
         $section->section_id = 6;
         $section->save();
     }
