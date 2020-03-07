@@ -103,7 +103,7 @@ export default {
                     icon: 'images/icons/manage.png',
                     services: [
                         "Property Supervision",
-                        "Tentent Services",
+                        "Tentant Services",
                         "Periodic property inspections",
                         "Resident retention-Lease renewals",
                         "Schedule unit turns",
