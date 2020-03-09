@@ -139,7 +139,7 @@ export default {
 
     .hamburger-container {
         position: absolute;
-        top: 0;
+        top: 32;
         left: 0;
         margin: 20px;
         z-index: 25;

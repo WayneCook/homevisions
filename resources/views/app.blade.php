@@ -9,6 +9,7 @@
     </head>
     <body>
 
+        
         <div class="app-wrapper">
             <div class="loader-container">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="70px" height="70px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
@@ -38,6 +39,20 @@
             </v-progress-linear>
 
             <v-container fluid class="main-container pa-0">
+
+            <div class="top-bar-wrapper container-fluid">
+                <div class="top-bar custom-container d-flex justify-end">
+                    <div class="phone-info-container">
+                    <v-icon
+                    size='20'
+                    color='#696b6cba'
+                    >
+                        mdi-phone
+                    </v-icon>
+                    (626) 531-7066
+                    </div>
+                </div>
+            </div>
                 <mobile-nav-component></mobile-nav-component>
                 <nav-component></nav-component>
                 <div class="bottom-nav">
