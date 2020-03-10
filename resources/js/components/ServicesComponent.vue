@@ -56,7 +56,7 @@
                                 <v-card
                                 class="service-cards"
                                 max-width="325"
-                                :elevation="13"
+                                :elevation="10"
                                 tile
                                 >
                                     <div class="icon-container ">

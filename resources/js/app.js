@@ -21,6 +21,7 @@ import NavComponent from './components/nav/NavComponent'
 import MobileNavComponent from './components/nav/MobileNavComponent'
 import LoginComponent from './components/LoginComponent'
 import PropertyManagementComponent from './components/PropertyManagementComponent'
+import TopBarComponent from './components/TopBarComponent'
 
 Vue.use(VueRouter)
 Vue.use(Vuetify)
@@ -88,6 +89,7 @@ const app = new Vue({
         HomeComponent,
         NavComponent,
         MobileNavComponent,
+        TopBarComponent,
         LoginComponent
     },
     mounted () {

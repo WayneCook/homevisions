@@ -2,6 +2,7 @@ const state = {
     data: [],
     loaded: false,
     sections: [],
+    companyInfo: '',
     snackBar: {
         active: false,
         message: ''
@@ -19,6 +20,9 @@ const mutations = {
     },
     setSections( state, payload ) {
         state.sections = payload;
+    },
+    setCompanyInfo( state, payload ) {
+        state.companyInfo = payload;
     },
     setViews( state, payload ) {
         state.views = payload;
@@ -69,6 +73,9 @@ const getters = {
     getSections( state ) {
         return state.sections;
     },
+    getCompanyInfo( state ) {
+        return state.companyInfo;
+    },
     getSnackBar( state ) {
         return state.snackBar;
     },
@@ -89,6 +96,7 @@ const getters = {
         ).then((response) => {
             commit('setData', response.data);
             commit('setSections', response.data.sections);
+            commit('setCompanyInfo', response.data.company_info);
             commit('setViews', response.data.views);
             commit('setViewCount', response.data.view_count);
             commit('setViewsToday', response.data.views_today);
@@ -136,6 +144,29 @@ const getters = {
             });
             return success;
         },
+        async updateCompanyInfo({ commit }, payload) {
+
+            let success = false;
+    
+            await axios.get(
+    
+                '/api/company', payload
+    
+                ).then(response => {
+    
+                    success = true
+                    commit('snack', 'Company Info saved succesfully')
+    
+                })
+                .catch(error => {
+                    // success.status = false;
+                    if(error.response.data.errors) {
+                        state.errors = error.response.data.errors
+                    }
+    
+                });
+                return success;
+            },
 
   }
 

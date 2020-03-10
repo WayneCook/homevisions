@@ -5,6 +5,7 @@ namespace App\Http\Controllers\api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Section;
+use App\Company;
 use App\Page;
 
 
@@ -17,7 +18,8 @@ class AppController extends Controller
         views($page)->record();
 
         return response()->json([
-            'sections' => Section::all()
+            'sections' => Section::all(),
+            'companyInfo' => Company::find(1)
         ]);
 
     }

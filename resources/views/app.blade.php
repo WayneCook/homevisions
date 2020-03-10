@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <title>Homevision</title>
     </head>
     <body>
@@ -39,20 +39,7 @@
             </v-progress-linear>
 
             <v-container fluid class="main-container pa-0">
-
-            <div class="top-bar-wrapper container-fluid">
-                <div class="top-bar custom-container d-flex justify-end">
-                    <div class="phone-info-container">
-                    <v-icon
-                    size='20'
-                    color='#696b6cba'
-                    >
-                        mdi-phone
-                    </v-icon>
-                    (626) 531-7066
-                    </div>
-                </div>
-            </div>
+                <top-bar-component></top-bar-component>
                 <mobile-nav-component></mobile-nav-component>
                 <nav-component></nav-component>
                 <div class="bottom-nav">
@@ -125,7 +112,7 @@
                 </v-container>
             </v-container>
         </v-app>
-        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ mix('js/app.js') }}"></script>
 
         <script>
            $(window).on('load', function() {

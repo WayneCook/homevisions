@@ -2,8 +2,8 @@
 <v-container fluid class="pa-0">
     <v-row class="mt-10">
         <v-img
-            src="/images/mountians.jpg"
-            lazy-src="/images/mountians.jpg"
+            src="/images/contact_mountians.jpg"
+            lazy-src="/images/contact_mountians.jpg"
             height="700"
         >
         <v-row class="mb-8">

@@ -52,6 +52,15 @@
             </v-list-item-content>
         </v-list-item>
 
+        <v-list-item to='/admin/company'>
+            <v-list-item-icon>
+                <v-icon>mdi-email-open-multiple-outline</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+                <v-list-item-title>Company</v-list-item-title>
+            </v-list-item-content>
+        </v-list-item>
+
 
       <v-list-group
         prepend-icon="mdi-file-document-box-multiple-outline"

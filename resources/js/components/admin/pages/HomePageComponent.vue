@@ -24,10 +24,6 @@ export default {
         getSections() {
             return this.$store.getters['admin/getSections'].filter(section => { return section.page === 'home'});
         }
-    },
-    mounted() {
-
-
     }
 
 }

@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::resource('api/section', 'api\SectionController');
 Route::resource('api/messages', 'api\MessageController');
+Route::get('api/company', 'api\CompanyController@update');
 
 Route::get('api/excel', 'api\MessageController@exportExcel');
 

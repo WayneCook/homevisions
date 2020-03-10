@@ -22,7 +22,6 @@ const mutations = {
 const getters = {
 
     getData( state ) {
-        console.log(state.data);
         return state.data
     },
     getLoaded( state ) {
