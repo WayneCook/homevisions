@@ -41,7 +41,7 @@ const router = new VueRouter({
     linkExactActiveClass: "active",
     routes: [
         { path: "/admin/dashboard", component: DashboardPageComponent, name: "dashboard" },
-        { path: "/admin/pages/home", component: HomePageComponent, name: "Home-page" },
+        { path: "/admin/pages/home", component: HomePageComponent, name: "home-page" },
         { path: "/admin/pages/about", component: AboutPageComponent, name: "about-page" },
         { path: "/admin/pages/property-management", component: PropertyManagementPageComponent, name: "property-management-page" },
         { path: "/admin/messages", component: MessagesPageComponent, name: "messages" },

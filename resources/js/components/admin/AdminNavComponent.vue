@@ -32,7 +32,9 @@
       <v-divider></v-divider>
 
     <v-list>
-        <v-list-item-group>
+
+        
+        <v-list-item-group color='#1976d2'>
 
         <v-list-item to='/admin/dashboard'>
             <v-list-item-icon>
@@ -54,7 +56,7 @@
 
         <v-list-item to='/admin/company'>
             <v-list-item-icon>
-                <v-icon>mdi-email-open-multiple-outline</v-icon>
+                <v-icon>mdi-domain</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
                 <v-list-item-title>Company</v-list-item-title>
@@ -62,18 +64,18 @@
         </v-list-item>
 
 
+
       <v-list-group
-        prepend-icon="mdi-file-document-box-multiple-outline"
+        prepend-icon="mdi-file-multiple-outline"
         no-action
       >
-        <template v-slot:activator>
+        <template v-slot:activator>            
           <v-list-item-title>Pages</v-list-item-title>
         </template>
-
-
+        
         <v-list-item to='/admin/pages/home'>
         <v-list-item-icon>
-          <v-icon>mdi-home</v-icon>
+          <v-icon>mdi-file-edit-outline</v-icon>
         </v-list-item-icon>
 
         <v-list-item-content>
@@ -85,7 +87,7 @@
 
         <v-list-item to='/admin/pages/about'>
             <v-list-item-icon>
-                <v-icon>mdi-home</v-icon>
+                <v-icon>mdi-file-edit-outline</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
                 <v-list-item-title>About</v-list-item-title>
@@ -94,16 +96,14 @@
 
         <v-list-item to='/admin/pages/property-management'>
             <v-list-item-icon>
-                <v-icon>mdi-home</v-icon>
+                <v-icon>mdi-file-edit-outline</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
                 <v-list-item-title>Property Management</v-list-item-title>
             </v-list-item-content>
         </v-list-item>
 
-
       </v-list-group>
-
 
 </v-list-item-group>
     </v-list>
@@ -140,7 +140,7 @@
         props: ['user'],
         data(){
             return {
-                drawer: false,
+                drawer: true,
                 snackbar: false
             }
         },
