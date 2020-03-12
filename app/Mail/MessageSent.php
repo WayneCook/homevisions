@@ -34,6 +34,6 @@ class MessageSent extends Mailable
     public function build()
     {
 
-        return $this->from($this->message_sent->email)->view('emails.message')->with(['message' => $this->message_sent]);
+        return $this->from('homevision@homevision.com')->view('emails.message')->with(['message' => $this->message_sent]);
     }
 }
