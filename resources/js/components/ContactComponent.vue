@@ -34,7 +34,7 @@
                 <v-img src="/images/icons/email.png" lazy-src="/images/icons/email.png"></v-img>
             </div>
 
-            <v-form v-model="valid">
+            <v-form v-model="valid" ref="form">
                 <v-container>
                 <v-row>
                     <v-col
@@ -128,6 +128,7 @@ export default {
             ).then(response => {
                 this.valid = true
                 this.loadingDialog = false
+                this.reset()
 
                 this.$swal(
                     {
@@ -165,7 +166,10 @@ export default {
             Object.keys(this.errors).forEach( key => {
                 this.errors[key] = ''
             })
-        }
+        },
+        reset () {
+        this.$refs.form.reset()
+      }
     }
 }
 </script>
