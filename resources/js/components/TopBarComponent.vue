@@ -50,4 +50,11 @@ export default {
     margin-top: 100px;
 }
 
+/* .top-bar-wrapper {
+    position: fixed;
+    background-color: #EBEDEF;
+    z-index: 9999;
+    width: 100%;
+} */
+
 </style>

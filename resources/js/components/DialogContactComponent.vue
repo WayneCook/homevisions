@@ -14,6 +14,7 @@
                     dark
                     tile
                 >
+                
                     <v-card-text>
                         Sending Message
                         <v-progress-linear
@@ -35,6 +36,14 @@
             <v-card-title class="text-center">
                 <h1 class="title-text">Contact us</h1>
             </v-card-title>
+
+            <v-container class="ma-0 pa-0">
+                <v-row class="d-flex justify-center">
+                    <v-icon class="mr-1" color="red" small>mdi-alert-circle</v-icon>
+                    <p class="ma-0 grey--text subtitle-2">Or text us directly at (626)722-2424</p>
+
+                </v-row>
+            </v-container>
             <v-form ref="form" v-model="valid">
                 <v-container>
                 <v-row>

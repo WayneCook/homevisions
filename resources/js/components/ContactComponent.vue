@@ -1,5 +1,6 @@
 <template>
     <div>
+       
         <div class="text-center">
             <v-dialog
             v-model="loadingDialog"
@@ -30,6 +31,14 @@
             max-width="550"
             tile
             >
+            <v-container class="ma-0 pa-0">
+                <v-row class="d-flex justify-end">
+                    <v-icon class="mr-1" color="red" small>mdi-alert-circle</v-icon>
+                    <p class="ma-0 grey--text subtitle-2">Or text us directly at (626)722-2424</p>
+
+                </v-row>
+            </v-container>
+            
             <div class="icon-container email-icon">
                 <v-img src="/images/icons/email.png" lazy-src="/images/icons/email.png"></v-img>
             </div>

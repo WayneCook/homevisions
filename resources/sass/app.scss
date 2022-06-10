@@ -112,5 +112,15 @@ html,body
 .container.footer-wrapper {
     // background-color: hsla(200, 7%, 94%, 1);
 }
+.action-container {
+    position: fixed;
+    z-index: 99999;
+    width: 200px;
+    display: block;
+    bottom: 0px;
+    right: 0px;
+
+
+}
 
 

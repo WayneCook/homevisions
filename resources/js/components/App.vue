@@ -34,7 +34,7 @@
                                 <a class="para footer-links" href="/">About</a>
                             </li>
                             <li>
-                                <a class="para footer-links" href="/admin/dashboard">Admin</a>
+                                <a class="para footer-links" href="/admin/dashboard">Admins</a>
                             </li>
 
                         </ul>
@@ -43,6 +43,7 @@
 
                 </v-col>
             </v-row>
+      
         </v-container>
 
     </v-container>
@@ -65,5 +66,9 @@ export default {
 </script>
 
 <style>
+
+.main-container {
+    margin-top: 40px;
+}
 
 </style>
