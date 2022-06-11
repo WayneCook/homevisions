@@ -55553,7 +55553,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); //Package
 
 
 
- //Components
+ //Components registration
 
 
 

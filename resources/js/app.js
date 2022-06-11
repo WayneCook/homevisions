@@ -14,7 +14,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
-//Components
+//Components registration
 import HomeComponent from './components/HomeComponent'
 import AboutComponent from './components/AboutComponent'
 import NavComponent from './components/nav/NavComponent'
