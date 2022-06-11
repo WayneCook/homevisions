@@ -11,9 +11,6 @@
 |
 */
 
-// Route::get('/admin/dashboard', function () {
-//     return view('admin');
-// })->name('admin-login')->middleware('guest');
 
 Auth::routes();
 
@@ -25,7 +22,6 @@ Route::get('api/excel', 'api\MessageController@exportExcel');
 
 Route::get('api/admin', 'api\AdminController@index');
 Route::get('api/app', 'api\AppController@index');
-// Route::get('api/messages', 'api\MessageController');
 
 Route::get('/admin', function () {
     return view('admin');
@@ -42,7 +38,6 @@ Route::get('/admin/{pages}', function () {
 Route::get('/admin-login', function () {
     return view('app');
 })->name('admin-login')->middleware('guest');
-
 
 Route::get('/{vue_capture?}', function () {
     return view('app');

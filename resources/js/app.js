@@ -22,6 +22,7 @@ import MobileNavComponent from './components/nav/MobileNavComponent'
 import LoginComponent from './components/LoginComponent'
 import PropertyManagementComponent from './components/PropertyManagementComponent'
 import TopBarComponent from './components/TopBarComponent'
+import FooterActionComponent from './components/FooterActionComponent'
 
 Vue.use(VueRouter)
 Vue.use(Vuetify)
@@ -90,7 +91,8 @@ const app = new Vue({
         NavComponent,
         MobileNavComponent,
         TopBarComponent,
-        LoginComponent
+        LoginComponent,
+        FooterActionComponent
     },
     mounted () {
         //  [App.vue specific] When App.vue is finish loading finish the progress bar

@@ -110,39 +110,8 @@
                         </v-col>
                     </v-row>
                 </v-container>
-                <v-container class="action-container">
-                    <v-row class="d-flex justify-end">
-                        <a href="mailto:homevisionmanagement@gmail.com" style="text-decoration: none;">
-                        <v-btn
-                            class="mx-2"
-                            fab
-                            dark
-                            large
-                            color="primary"
-                            >
-                            <v-icon dark>
-                                mdi-email
-                            </v-icon>
-                            </v-btn>
-                        </a>
 
-                        <a href = "tel:626-722-2424" style="text-decoration: none;">
-                            <v-btn
-                            class="mx-2 d-sm-flex d-md-none"
-                            fab
-                            dark
-                            large
-                            color="success"
-                            >
-                            <v-icon dark>
-                                mdi-phone
-                            </v-icon>
-                            </v-btn>
-
-                        </a>
-                            
-                    </v-row>
-                </v-container>
+                <footer-action-component></footer-action-component> 
 
             </v-container>
         </v-app>
